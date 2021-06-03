@@ -1,0 +1,241 @@
+/* table */
+.tbl-wrap {
+    .tbl-title {
+        margin-bottom:10px;
+        @include font-lg;
+        font-weight:700;
+    }
+    .tbl-count {
+        margin-bottom:6px;
+        @include font;
+        @include skew;
+        line-height:1 !important;
+    }
+    .table {
+        table-layout:fixed;
+        width:100%;
+        // col table
+        &.col-tbl {
+            vertical-align:middle;
+            border-top:1px solid $basic;
+            text-align:center;
+            .col1 {
+                width:10%;
+                @include mobile {
+                    width:80px;
+                }
+            }
+            .col2 {
+                width:15%;
+                @include mobile {
+                    width:100px;
+                }
+            }
+            .col3 {
+                width:20%;
+            }
+            thead {
+                th {
+                    height:60px;
+                    padding:12px;
+                    border-bottom:1px solid $basic;
+                    @include font;
+                    font-weight:700;
+                    @include mobile {
+                        height:50px;
+                        padding:10px;
+                    }
+                }
+            }
+            tbody {
+                th,
+                td {
+                    height:60px;
+                    padding:12px;
+                    border-bottom:1px solid $border;
+                    @include font;
+                    vertical-align:middle;
+                    word-break:keep-all;
+                    @include mobile {
+                        height:50px;
+                        padding:10px;
+                    }
+                    .flag-title {
+                        display:flex;
+                        align-items:center;
+                        .flag {
+                            margin-right:40px;
+                            @include mobile {
+                                margin-right:15px;
+                            }
+                        }
+                    }
+                }
+            }
+            &.type2 {
+                border-top-color:$point;
+                thead {
+                    th {
+                        height:55px;
+                        border-left:1px solid $white;
+                        border-bottom-color:$point;
+                        background:$point;
+                        color:$white;
+                        font-weight:700;
+                        word-break:keep-all;
+                        &:first-child {
+                            border-left:none;
+                        }
+                    }
+                }
+                tbody {
+                    th, 
+                    td {
+                        border-left:1px solid $border;
+                        word-break:keep-all;
+                        &:first-child {
+                            border-left:none;
+                        }
+                        &.bg {
+                            background-color:$blur;
+                        }
+                    }
+                }
+            }
+        }
+        // row table
+        &.row-tbl {
+            .col1 {
+                width:20%;
+                @include mobile {
+                    width:120px;
+                }
+            }
+            .col2 {
+                width:30%;
+                @include mobile {
+                    width:40%;
+                }
+            }
+            tbody {
+                tr:first-child {
+                    th,
+                    td {
+                        border-top:1px solid $basic;
+                    }
+                }
+                th,
+                td {
+                    height:60px;
+                    padding:12px 20px;
+                    border-bottom:1px solid $border;
+                    @include font;
+                    vertical-align:middle;
+                    word-break:keep-all;
+                    @include mobile {
+                        padding:10px;
+                    }
+                }
+                th {
+                    background:$disabled;
+                    text-align:center;
+                }
+                td {
+                    color:$cont;
+                }
+            }
+            &.type2 {
+                tbody {
+                    th {
+                        background:transparent;
+                        border-right:1px solid $border;
+                        text-align:left;
+                    }
+                    th, td {
+                        padding:25px 60px;
+                        @include tablet {
+                            padding:25px 30px;
+                        }
+                        @include mobile {
+                            padding:20px;
+                        }
+                    }
+                }
+            }
+        }
+        a[class^="link-"] {
+            max-width:100%;
+            @include textEllipsis;
+            &.new {
+                position:relative;
+                padding-right:20px;
+                &::after {
+                    content:'N';
+                    position:absolute;
+                    right:0;
+                    top:50%;
+                    width:16px;
+                    height:16px;
+                    background:$red;
+                    color:$white;
+                    border-radius:4px;
+                    margin-top:-8px;
+                    font-family:sans-serif;
+                    font-size:11px;
+                    line-height:15px;
+                    text-align:center;
+                }
+            }
+            &.file {
+                position:relative;
+                padding-right:20px;
+                &::before {
+                    content:' ';
+                    position:absolute;
+                    right:0;
+                    top:50%;
+                    width:16px;
+                    height:16px;
+                    margin-top:-8px;
+                    background:url('/images/icon/icon-clip.png') center no-repeat;
+                }
+            }
+            &.new.file {
+                padding-right:40px;
+                &::before {
+                    right:20px;
+                }
+            }
+        }
+        .alert {
+            margin-top:5px;
+            @include font-sm;
+            color:$cont;
+        }
+        .essen {
+            &::after {
+                content:'*';
+                display:inline-block;
+                color:$point2;
+                margin-left:4px;
+            }
+        }
+    }
+    .table-responsive {
+        @include tablet {
+            overflow-x:auto;
+            -webkit-overflow-scrolling:touch;
+            .table {
+                table-layout:auto;
+                th, 
+                td {
+                    white-space:nowrap;
+                }
+                a[class^="link-"] {
+                    max-width:200px;
+                    @include textEllipsis;
+                }
+            }
+        }
+    }
+}

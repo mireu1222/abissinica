@@ -1,0 +1,99 @@
+/* 사업자 구매 */
+.container.cate05 {
+    // 구매 안내
+    .buisnessman-cont {
+        .hello {
+            display:flex;
+            align-items:center;
+            padding:0 70px;
+            @include calcs(padding-top, 120px, 1280px);
+            @include calcs(padding-bottom, 120px, 1280px);
+            background-image:url('/images/img/img-sub0501.jpg');
+            background-size:cover;
+            background-repeat:no-repeat;
+            background-position:center;
+            @include tablet {
+                padding-left:30px;
+                padding-right:30px;
+            }
+            @include mobile {
+                padding:0;
+                @include calcs(padding-top, 546px, 1280px);
+                background-size:100% auto;
+                background-position:center 0;
+            }
+            .text {
+                @include calcs(width, 450px, 1280px);
+                margin-left:auto;
+                padding:20px 0;
+                color:$white;
+                @include mobile {
+                    width:100%;
+                    margin-top:20px;
+                    padding:0;
+                    color:$basic;
+                }
+                .tit {
+                    font-size:28px;
+                    line-height:34px;
+                    font-weight:700;
+                    word-break:keep-all;
+                    @include mobile {
+                        font-size:20px;
+                        line-height:24px;
+                    }
+                }
+                .desc {
+                    position:relative;
+                    margin-top:20px;
+                    padding-top:21px;
+                    @include font;
+                    color:rgba($white, 0.7);
+                    word-break:keep-all;
+                    &::before {
+                        content:' ';
+                        position:absolute;
+                        top:0;
+                        left:0;
+                        width:70px;
+                        height:1px;
+                        background:rgba($white, 0.7);
+                    }
+                    @include mobile {
+                        color:$basic;
+                        &::before {
+                            background:rgba($basic, 0.7);
+                        }
+                    }
+                }
+            }
+        }
+        .infos {
+            margin-top:50px;
+            @include mobile {
+                margin-top:30px;
+            }
+            dl {
+                display:flex;
+                border-bottom:1px solid $border;
+                &:first-child {
+                    border-top:1px solid $border;
+                }
+                dt {
+                    width:120px;
+                    padding:6px 15px;
+                    background:$blur;
+                    @include font;
+                    text-align:center;
+                }
+                dd {
+                    width:calc(100% - 120px);
+                    padding:6px 15px;
+                    color:$cont;
+                    @include font;
+                    word-break:keep-all;
+                }
+            }
+        }
+    }
+}

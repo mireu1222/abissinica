@@ -1,0 +1,94 @@
+/* accordion */
+.accordion-wrap {
+    position:relative;
+    ul.lists {
+        border-top:1px solid $basic;
+        > li {
+            border-bottom:1px solid $border;
+            &:last-child {
+                border-bottom:1px solid $basic;
+            }
+            .accord-title {
+                display:block;
+                position:relative;
+                .btn-toggle {
+                    display:block;
+                    position:relative;
+                    width:100%;
+                    padding:20px 50px 20px 46px;
+                    text-align:left;
+                    @include font;
+                    font-weight:500;
+                    word-break:keep-all;
+                    @include tablet {
+                        padding:15px 50px 15px 38px;
+                    }
+                    &::before {
+                        content:'Q';
+                        position:absolute;
+                        top:20px;
+                        left:20px;
+                        color:$point2;
+                        font-size:24px;
+                        font-weight:800;
+                        @include tablet {
+                            top:15px;
+                            left:12px;
+                            font-size:20px;
+                        }
+                    }
+                    &::after {
+                        content:' ';
+                        position:absolute;
+                        top:50%;
+                        right:25px;
+                        width:10px;
+                        height:10px;
+                        border:2px solid $basic;
+                        border-top:none;
+                        border-left:none;
+                        margin-top:-8px;
+                        transform:rotate(45deg);
+                        transition:all 0.2s ease-out;
+                        @include tablet {
+                            right:17px;
+                        }
+                    }
+                }
+            }
+            &.open {
+                .accord-title .btn-toggle::after {
+                    margin-top:-3px;
+                    transform:rotate(225deg);
+                }
+            }
+            .accord-cont {
+                display:none;
+                position:relative;
+                padding:20px;
+                padding-left:66px;
+                background:$blur;
+                color:$cont;
+                @include font;
+                word-break:keep-all;
+                @include tablet {
+                    padding:15px 20px 15px 58px;
+                }
+                &::before {
+                    content:'A';
+                    position:absolute;
+                    top:20px;
+                    left:40px;
+                    color:$point;
+                    font-size:24px;
+                    font-weight:800;
+                    @include tablet {
+                        top:15px;
+                        left:12px;
+                        font-size:20px;
+                    }
+                }
+            }
+        }
+    }
+}

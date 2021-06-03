@@ -1,0 +1,129 @@
+/* pagination */
+.pagination {
+    margin-top:40px;
+    font-size:0;
+    text-align:center;
+    @include mobile {
+        margin-top:30px;
+    }
+    .control-btn, 
+    .page-btn-wrap,
+    .page-btn-wrap .now,
+    .page-btn-wrap a {
+        display:inline-block;
+        vertical-align:top;
+    }
+    .control-btn,
+    .page-btn-wrap .now,
+    .page-btn-wrap a {
+        width:34px;
+        height:34px;
+        font-size:16px;
+        color:$cont;
+        border:1px solid transparent;
+        line-height:34px;
+        background:#fff;
+        @include skew;
+        @include mobile {
+            width:30px;
+            height:30px;
+            line-height:30px;
+            font-size:14px;
+            @include skew;
+        }
+    }
+    .control-btn {
+        position:relative;
+        margin:0 3px;
+        @include mobile {
+            margin:0 2px;
+        }
+        &::before,
+        &::after {
+            content:' ';
+            position:absolute;
+            top:50%;
+            left:50%;
+            width:10px;
+            height:10px;
+            margin-top:-5px;
+            border:1px solid $cont;
+            border-bottom:none;
+            border-right:none;
+            @include mobile {
+                width:8px;
+                height:8px;
+                margin-top:-4px;
+            }
+        }
+        &.prev,
+        &.pprev {
+            &::before,
+            &::after {
+                transform:rotate(-45deg);
+            }
+        }
+        &.prev {
+            &::before {
+                margin-left:-3px;
+            }
+        }
+        &.pprev {
+            &::before {
+                margin-left:-5px;
+            }
+        }
+        &.next,
+        &.nnext {
+            &::before,
+            &::after {
+                transform:rotate(135deg);
+            }
+        }
+        &.next {
+            &::before {
+                margin-left:-8px;
+                @include mobile {
+                    margin-left:-6px;
+                }
+            }
+        }
+        &.nnext {
+            &::before {
+                margin-left:-11px;
+                @include mobile {
+                    margin-left:-8px;
+                }
+            }
+            &::after {
+                margin-left:-6px;
+                @include mobile {
+                    margin-left:-3px;
+                }
+            }
+        }
+        &.prev,
+        &.next {
+            &::after {
+                display:none;
+            }
+        }
+    }
+    .page-btn-wrap {
+        margin:0;
+        > * {
+            margin:0 3px;
+            border-color:$border;
+            border-radius:50%;
+            @include mobile {
+                margin:0 2px;
+            }
+        }
+        .now {
+            border-color:$point;
+            background:$point;
+            color:$white;
+            font-weight:700;
+        }
+    }
+}

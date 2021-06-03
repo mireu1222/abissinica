@@ -1,0 +1,186 @@
+/* 커피공장카페, 제이콥스스테이션 */
+.cafe-intro {
+    &.type1 {
+        .intro-hello {
+            .text {
+                color:$yellow;
+            }
+            .tit {
+                span {
+                    color:$yellow;
+                }
+                &::before {
+                    background:$yellow;
+                }
+            }
+        }
+        .bg-wrap::before {
+            background-color:#dfc381 !important;
+        }
+    }
+    &.type2 {
+        .intro-hello {
+            .text {
+                color:$point;
+            }
+            .tit {
+                span {
+                    color:$point;
+                }
+                &::before {
+                    background:$point;
+                }
+            }
+        }
+        .bg-wrap::before {
+            background-color:#aab396 !important;
+        }
+    }
+    .intro-hello {
+        @include contArea;
+        .text {
+            font-size:72px;
+            line-height:1;
+            letter-spacing:-3px;
+            word-break:keep-all;
+            @include tablet {
+                font-size:55px;
+            }
+            @include mobile {
+                font-size:40px;
+                line-height:1.1;
+            }
+        }
+        .tit {
+            position:relative;
+            margin-top:20px;
+            @include mobile {
+                margin-top:10px;
+            }
+            span {
+                position:relative;
+                display:inline-block;
+                vertical-align:top;
+                padding-right:20px;
+                background-color:$white;
+                @include font-lg;
+                @include mobile {
+                    padding-right:10px;
+                }
+            }
+            &::before {
+                content:' ';
+                position:absolute;
+                top:50%;
+                left:0;
+                right:0;
+                height:2px;
+                margin-top:-1px;
+            }
+        }
+    }
+    .intro-title {
+        @include contArea;
+        margin-top:40px;
+        @include mobile {
+            margin-top:30px;
+        }
+        h4 {
+            @include font-xl;
+            font-weight:700;
+        }
+        .desc {
+            color:$cont;
+            @include font;
+        }
+    }
+    .bg-wrap {
+        margin-top:40px;
+        @include mobile {
+            margin-top:30px;
+        }
+        &::before {
+            top:0 !important;
+            transform:translateY(0) !important;
+            @include mobile {
+                height:150px !important;
+            }
+        }
+        .visual-wrap {
+            @include contArea;
+            .tit {
+                padding:55px 0 35px;
+                color:$white;
+                font-size:30px;
+                line-height:1;
+                font-weight:700;
+                @include mobile {
+                    padding:30px 0 15px;
+                    font-size:24px;
+                }
+                small {
+                    display:block;
+                    @include font;
+                    font-weight:400;
+                }
+            }
+            .swiper-container {
+                position:relative;
+                .swiper-control {
+                    position:absolute;
+                    right:0;
+                    bottom:0;
+                    background:rgba($white, 0.4);
+                    z-index:10;
+                    &::before {
+                        content:' ';
+                        position:absolute;
+                        top:50%;
+                        left:16px;
+                        right:16px;
+                        height:1px;
+                        background:rgba($white, 0.6);
+                        @include mobile {
+                            left:4px;
+                            right:4px;
+                        }
+                    }
+                    .control-btn {
+                        position:relative;
+                        display:block;
+                        width:85px;
+                        height:70px;
+                        cursor:pointer;
+                        @include mobile {
+                            width:50px;
+                            height:40px;
+                        }
+                        &::before {
+                            content:' ';
+                            position:absolute;
+                            top:50%;
+                            left:50%;
+                            width:16px;
+                            height:16px;
+                            margin-top:-8px;
+                            border:2px solid $white;
+                            border-top:none;
+                            border-left:none;
+                        }
+                        &.prev::before {
+                            transform:rotate(135deg);
+                            margin-left:-4px;
+                        }
+                        &.next {
+                            margin-top:1px;
+                            &::before {
+                                transform:rotate(-45deg);
+                                margin-left:-12px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

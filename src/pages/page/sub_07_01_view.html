@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    @@include('./layout/head.html')
+</head>
+<body>
+    <div class="skip-navigation">
+        <a href="#container">메뉴 건너뛰기</a>
+    </div>
+    <div id="wrap">
+        <!-- header -->
+        @@include('./layout/header.html', {
+            cate07 : true,
+        })
+        <!-- // header -->
+
+        <!-- container -->
+        <div id="container" class="container cate07">
+            @@include('./layout/page-title.html', {
+                cate07 : true,
+                sub0701 : true,
+                title : '공지사항'
+            })
+
+            <!-- page contents -->
+            <div class="contents">
+                <section>
+                    @@include('./modules/board-view.html', {
+                        page : 'sub_07_01'
+                    })
+                </section>
+            </div>
+            <!-- // page contents -->
+        </div>
+        <!-- // container -->
+
+        <!-- footer -->
+        @@include('./layout/footer.html')
+        <!-- // footer -->
+    </div>
+</body>
+</html>

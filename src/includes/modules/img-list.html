@@ -1,0 +1,10 @@
+<div class="img-list-wrap">
+    <ul>
+        @@for(var i=0; i < list.length; i++) {
+        <li>
+            <img src="/images/@@img-`+[i+1]+`.gif" alt="`+list[i]+`">
+            <p class="caption" aria-hidden="true">`+list[i]+`</p>
+        </li>
+        }
+    </ul>
+</div>

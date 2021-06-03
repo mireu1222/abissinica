@@ -1,0 +1,308 @@
+/* common layout */
+.skip-navigation {
+    position:absolute;
+    z-index:9999;
+    a {
+        display:block;
+        width:1px;
+        height:1px;
+        margin:-1px;
+        overflow:hidden;
+    }
+}
+
+#wrap {
+    overflow:hidden;
+}
+
+/* container */
+.container {
+    position:relative;
+    @for $i from 1 through 7 {
+        &.cate0#{$i} {
+            .page-title {
+                background-image:url('/images/bg/bg-subvisual0#{$i}.jpg');
+            }
+        }
+    }
+    .page-title {
+        height:350px;
+        padding-top:185px;
+        background-size:cover;
+        background-repeat:no-repeat;
+        background-position:center;
+        .title {
+            color:$white;
+            font-size:30px;
+            line-height:1;
+            font-weight:700;
+            text-align:center;
+        }
+        @include mobile {
+            height:160px;
+            padding-top:90px;    
+            .title {
+                font-size:24px;
+            }
+        }
+    }
+    .sub-depth-wrap {
+        position:relative;
+        @include contArea;
+        margin-top:-30px;
+        @include mobile {
+            margin-top:0;
+            padding:0;
+            text-align:center;
+            overflow:hidden;
+            &::before {
+                content:' ';
+                position:absolute;
+                left:0;
+                right:0;
+                bottom:0;
+                height:1px;
+                background:$border;
+                z-index:-1;
+            }
+        }
+        .tabs {
+            display:flex;
+            @include exmob {
+                width:100% !important;
+                min-width:100%;
+            }
+            @include mobile {
+                position:relative;
+                display:inline-block;
+                white-space:nowrap;
+                font-size:0;
+                vertical-align:top;
+            }
+            li {
+                flex:1;
+                background:$point;
+                @include mobile {
+                    display:inline-block;
+                    vertical-align:top;
+                    background:none;
+                }
+                a {
+                    display:block;
+                    border-left:1px solid $white;
+                    background:transparent;
+                    color:$white;
+                    text-align:center;
+                    font-size:16px;
+                    line-height:60px;
+                    font-weight:700;
+                    @include skew;
+                    transition:background 0.2s linear;
+                    @include pc {
+                        &:hover {
+                            background:rgba(#000, 0.15);
+                        }
+                    }
+                    @include mobile {
+                        height:45px;
+                        padding:0 15px;
+                        border-left:none;
+                        border-bottom:2px solid transparent;
+                        color:$gray;
+                        font-size:14px;
+                        line-height:45px;
+                    }
+                }
+                &:first-child a {
+                    border-left:none;
+                }
+                &.active a {
+                    background:$blur;
+                    color:$point;
+                    @include mobile {
+                        background:none;
+                        border-color:$point;
+                    }
+                }
+            }
+        }
+    }
+    .breadcrumb {
+        @include contArea;
+        margin-top:20px;
+        @include mobile {
+            margin-top:15px;
+        }
+        ol {
+            font-size:0;
+            text-align:right;
+            li {
+                display:inline-block;
+                vertical-align:top;
+                font-size:14px;
+                color:$cont;
+                @include skew;
+                @include mobile {
+                    font-size:12px;
+                }
+                &::before {
+                    content:'>';
+                    display:inline-block;
+                    vertical-align:top;
+                    margin:0 6px;
+                }
+                &:first-child::before {
+                    display:none;
+                }
+                &.now {
+                    color:$basic;
+                    font-weight:700;
+                }
+            }
+        }
+    }
+    .sub-page-title {
+        position:relative;
+        @include contArea;
+        margin-top:65px;
+        font-size:32px;
+        line-height:1;
+        font-weight:700;
+        text-align:center;
+        @include mobile {
+            margin-top:40px;
+            font-size:26px;
+        }
+    }
+    .contents {
+        padding-top:50px;
+        padding-bottom:90px;
+        @include mobile {
+            padding-top:40px;
+            padding-bottom:70px;
+        }
+        > section {
+            @include contArea;
+            margin-top:150px;
+            @include mobile {
+                margin-top:80px;
+            }
+            &.full {
+                max-width:100%;
+                padding-left:0;
+                padding-right:0;
+            }
+            &:first-child {
+                margin-top:0;
+            }
+            .bg-wrap {
+                position:relative;
+                &::before {
+                    content:' ';
+                    position:absolute;
+                    top:50%;
+                    left:0;
+                    right:0;
+                    height:350px;
+                    transform:translateY(-50%);
+                    background:$disabled;
+                    z-index:-1;
+                    @include tablet {
+                        height:300px;
+                    }
+                    @include mobile {
+                        height:260px;
+                    }
+                }
+            }
+            .title-wrap {
+                margin-bottom:30px;
+                text-align:center;
+                @include mobile {
+                    margin-bottom:20px;
+                }
+                .tit {
+                    position:relative;
+                    padding-bottom:25px;
+                    @include font-giant;
+                    font-weight:700;
+                    &::after {
+                        content:' ';
+                        position:absolute;
+                        bottom:0;
+                        left:50%;
+                        width:78px;
+                        height:1px;
+                        background:$border;
+                        margin-left:-39px;
+                    }
+                    @include mobile {
+                        padding-bottom:21px;
+                        &::after {
+                            width:60px;
+                            margin-left:-30px;
+                        }
+                    }
+                }
+                .desc {
+                    margin-top:20px;
+                    color:$gray;
+                    @include font;
+                    word-break:keep-all;
+                    .img {
+                        display:block;
+                        margin-bottom:20px;
+                    }
+                    @include mobile {
+                        br {
+                            display:none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    // nodata
+    .nodata {
+        padding:100px 0;
+        @include font;
+        text-align:center;
+    }
+    // 개인정보수집동의
+    .agree-chk-box {
+        margin-top:40px;
+        @include mobile {
+            margin-top:20px;
+        }
+        .tit {
+            margin-bottom:10px;
+            @include font-lg;
+            font-weight:700;
+        }
+        .agree-cont {
+            max-height:200px;
+            padding:20px;
+            border:1px solid $border;
+            overflow-y:auto;
+            @include font-sm;
+            color:$cont;
+            @include mobile {
+                padding:12px;
+            }
+        }
+        .chk-wrap {
+            margin-top:10px;
+        }
+    }
+}
+
+/* dim */
+.common-dim {
+    position:fixed;
+    top:0;
+    right:0;
+    bottom:0;
+    left:0;
+    background:rgba(#000, 0.5);
+    z-index:1005;
+}

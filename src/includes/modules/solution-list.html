@@ -1,0 +1,12 @@
+<div class="solution-list-wrap">
+    <ul>
+        @@for(var i=0; i < list.length; i++){
+        <li>
+            <a href="#n" class="inner">
+                <span class="thumb" style="background-image:url('/images/`+list[i].img+`.jpg')" aria-hidden="true"></span>
+                <p>`+list[i].title+`</p>
+            </a>
+        </li>
+        }
+    </ul>
+</div>

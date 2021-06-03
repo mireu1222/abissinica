@@ -1,0 +1,172 @@
+/* input */
+.form-control {
+    display:block;
+    max-width:500px;
+    width:100%;
+    min-height:40px;
+    height:40px;
+    padding:7px 14px;
+    border:1px solid $border;
+    border-radius:$border-radius;
+    background:transparent;
+    font-size:16px;
+    line-height:normal;
+    @include skew;
+    transition:$input-transition;
+    @include mobile {
+        font-size:14px;
+        padding:7px 10px;
+    }
+    &:focus {
+        outline:none;
+        border-color:$point;
+    }
+    &::placeholder,
+    &::-webkit-input-placeholder {
+        font-size:14px;
+        color:$placeholder;
+        opacity:1;
+        @include mobile {
+            font-size:13px;
+        }
+    }
+    &::-webkit-outer-spin-button,
+    &::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+    }
+    &:disabled {
+        background:$disabled;
+        color:$gray;
+    }
+    &:read-only {
+        background:rgba($disabled, 0.4);
+        color:$cont;
+    }
+}
+input[type=password].form-control {
+    font-family:sans-serif;
+    &::placeholder,
+    &::-webkit-input-placeholder {
+        font-family:$font-family-square;
+        transform:translateY(-2px);
+    }
+}
+textarea.form-control {
+    resize:none;
+    max-width:100%;
+    height:125px;
+}
+
+/* checkbox, radio */
+$types : chk, rdo, rdo-btn;
+@each $type in $types {
+    .#{$type}-wrap {
+        display:inline-block;
+        position:relative;
+        min-height:24px;
+        vertical-align:top;
+        @include mobile {
+            min-height:22px;
+        }
+        input {
+            position:absolute;
+            width:1px;
+            height:1px;
+            padding:0;
+            margin:-1px;
+            overflow:hidden;
+            clip:rect(0, 0, 0, 0);
+            border:0;
+            + label {
+                display:inline-block;
+                position:relative;
+                cursor:pointer;
+                padding-left:30px;
+                color:$cont;
+                @include font;
+                user-select:none;
+                vertical-align:top;
+                @if $type == 'chk' {
+                    &::before {
+                        content:' ';
+                        position:absolute;
+                        top:3px;
+                        left:0;
+                        width:18px;
+                        height:18px;
+                        border:1px solid $border;
+                        background:#fff;
+                        @include mobile {
+                            top:1px;
+                        }
+                    }
+                }
+                @if $type == 'rdo' {
+                    &::before {
+                        content:' ';
+                        position:absolute;
+                        top:3px;
+                        left:0;
+                        width:18px;
+                        height:18px;
+                        border:1px solid $border;
+                        background:#fff;
+                        border-radius:9px;
+                        @include mobile {
+                            top:1px;
+                        }
+                    }
+                }
+            }
+            &:disabled + label {
+                color:$gray;
+                &::before {
+                    background:$disabled;
+                }
+            }
+            @if $type == 'chk' {
+                &:checked + label {
+                    &::after {
+                        content:' ';
+                        position:absolute;
+                        top:4px;
+                        left:5px;
+                        width:8px;
+                        height:12px;
+                        border:3px solid $point;
+                        border-top:none;
+                        border-left:none;
+                        transform:rotate(45deg);
+                        @include mobile {
+                            top:2px;
+                        }
+                    }
+                }
+            }
+            @if $type == 'rdo' {
+                &:checked + label {
+                    &::after {
+                        content:' ';
+                        position:absolute;
+                        top:7px;
+                        left:4px;
+                        width:10px;
+                        height:10px;
+                        border-radius:5px;
+                        background:$point;
+                        @include mobile {
+                            top:5px;
+                        }
+                    }
+                }
+            }
+            @if $type == 'rdo-btn' {
+                &:checked + label {
+                    border-color:$point;
+                    background:#fff;
+                    color:$point;
+                }
+            }
+        }
+    }
+}

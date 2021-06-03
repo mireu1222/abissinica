@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    @@include('./layout/head.html')
+</head>
+<body>
+    <div class="skip-navigation">
+        <a href="#container">메뉴 건너뛰기</a>
+    </div>
+    <div id="wrap">
+        <!-- header -->
+        @@include('./layout/header.html', {
+            cate03 : true,
+        })
+        <!-- // header -->
+
+        <!-- container -->
+        <div id="container" class="container cate03">
+            @@include('./layout/page-title.html', {
+                cate03 : true,
+                sub0301 : true,
+                title : '커피공장카페 소개'
+            })
+
+            <!-- page contents -->
+            <div class="contents">
+                <section class="full">
+                    <div class="cafe-intro type1">
+                        <div class="intro-hello">
+                            <p class="text ft-mj">A cafe where the story of the staying space becomes special.</p>
+                            <p class="tit"><span>머무르는 공간의 이야기가 특별해지는 카페</span></p>
+                        </div>
+                        <div class="intro-title">
+                            <h4>커피공장카페는 멋과 맛이 공존하는 카페입니다.</h4>
+                            <p class="desc">고급스러운 인테리어와 최고급 원두인 아비시니카를 전문으로 취급하고 있습니다.</p>
+                        </div>
+                        <div class="bg-wrap">
+                            <div class="visual-wrap">
+                                <p class="tit">
+                                    COFFEE FACTORY
+                                    <small>머무르는 공간의 이야기가 풍부할수록 기억은 더 특별해집니다.</small>
+                                </p>
+                                <div class="swiper-container">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide">
+                                            <img src="/images/img/img-sub0301-visual01.jpg" alt="">
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <img src="/images/img/img-sub0301-visual02.jpg" alt="">
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <img src="/images/img/img-sub0301-visual03.jpg" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="swiper-control">
+                                        <div class="control-btn prev"><span class="blind">PREV</span></div>
+                                        <div class="control-btn next"><span class="blind">NEXT</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <!-- // page contents -->
+        </div>
+        <!-- // container -->
+
+        <!-- footer -->
+        @@include('./layout/footer.html')
+        <!-- // footer -->
+    </div>
+</body>
+<script>
+    const imgSlider = new Swiper('.visual-wrap .swiper-container', {
+        autoplay : {
+            delay : 5000
+        },
+        loop : true,
+        navigation : {
+            nextEl : '.visual-wrap .control-btn.next',
+            prevEl : '.visual-wrap .control-btn.prev',
+        }
+    });
+</script>
+</html>

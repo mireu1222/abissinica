@@ -1,0 +1,165 @@
+/* form */
+.form-wrap {
+    .row {
+        display:flex;
+        align-items:center;
+        margin-top:5px;
+        &:first-child {
+            margin-top:0;
+        }
+        > * {
+            margin-left:5px;
+            &:first-child {
+                margin-left:0;
+            }
+        }
+        .form-control.auto {
+            width:50%;
+            max-width:200px;
+            @include mobile {
+                width:100%;
+            }
+        }
+        .form-control.half {
+            flex:1;
+            max-width:360px;
+        }
+        .btn {
+            font-size:14px;
+            @include mobile {
+                font-size:13px;
+            }
+        }
+        > label {
+            padding-right:20px;
+            @include font;
+            font-weight:700;
+        }
+        &.m-col {
+            @include mobile {
+                flex-direction:column;
+                > * {
+                    width:100%;
+                    margin:0;
+                    margin-top:5px;
+                    &:first-child {
+                        margin-top:0;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* file upload */
+.inputfile-wrap {
+    position:relative;
+    max-width:500px;
+    font-size:0;
+    input[type="file"] {
+        position:absolute;
+        width:1px;
+        height:1px;
+        margin:-1px;
+        padding:0;
+        border:0;
+        overflow:hidden;
+        clip:rect(0, 0, 0, 0);
+    }
+    .form-control {
+        display:inline-block;
+        width:calc(100% - 95px);
+    }
+    label {
+        display:inline-block;
+        width:90px;
+        margin-left:5px;
+    }
+}
+
+/* search */
+.list-filter {
+    display:flex;
+    margin-bottom:20px;
+    .search-wrap {
+        display:flex;
+        width:60%;
+        max-width:500px;
+        margin-left:auto;
+        @include mobile {
+            width:100%;
+            max-width:100%;
+        }
+        .selectbox-wrap {
+            .nice-select {
+                min-width:140px;
+                height:50px;
+                color:$basic;
+                font-size:16px;
+                line-height:48px;
+                border-radius:0;
+                border-color:$basic;
+                &::after {
+                    border-color:$basic;
+                }
+                @include mobile {
+                    min-width:110px;
+                    font-size:14px;
+                    height:40px;
+                    line-height:38px;
+                }
+                &.open .list {
+                    border-radius:0;
+                }
+                .option {
+                    min-height:50px;
+                    line-height:50px;
+                    @include mobile {
+                        min-height:40px;
+                        line-height:40px;
+                    }
+                    &:hover,
+                    &.focus,
+                    &.selected,
+                    &.selected.focus {
+                        background-color:$basic;
+                        color:$white;
+                    }
+                }
+                .list:hover .option:not(:hover) {
+                    color:$basic;
+                    background-color:transparent;
+                }
+            }
+        }
+        .input-wrap {
+            flex:1;
+            input {
+                height:50px;
+                padding:12px 14px;
+                border-radius:0;
+                border-color:$basic;
+                border-left:none;
+                &::placeholder,
+                &::-webkit-input-placeholder {
+                    @include font;
+                }
+                @include mobile {
+                    height:40px;
+                    padding:10px 14px;
+                }
+            }
+        }
+        .btn-search {
+            display:block;
+            width:50px;
+            height:50px;
+            background:$basic url('/images/icon/icon-search.png') center no-repeat;
+            @include mobile {
+                width:40px;
+                height:40px;
+                background-size:20px;
+            }
+        }
+    }
+}

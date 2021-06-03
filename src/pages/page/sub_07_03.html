@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    @@include('./layout/head.html')
+</head>
+<body>
+    <div class="skip-navigation">
+        <a href="#container">메뉴 건너뛰기</a>
+    </div>
+    <div id="wrap">
+        <!-- header -->
+        @@include('./layout/header.html', {
+            cate07 : true,
+        })
+        <!-- // header -->
+
+        <!-- container -->
+        <div id="container" class="container cate07">
+            @@include('./layout/page-title.html', {
+                cate07 : true,
+                sub0703 : true,
+                title : '1:1문의'
+            })
+
+            <!-- page contents -->
+            <div class="contents">
+                <section>
+                    @@include('./modules/input-table.html', {
+                        sub0702 : true,
+                        caption : '1:1문의',
+                        agree : true,
+                    })
+                    <div class="btn-group">
+                        <button type="submit" class="btn btn-point btn-lg"><span>문의 등록</span></button>
+                    </div>
+                </section>
+            </div>
+            <!-- // page contents -->
+        </div>
+        <!-- // container -->
+
+        <!-- footer -->
+        @@include('./layout/footer.html')
+        <!-- // footer -->
+    </div>
+</body>
+<script>
+    accordion('.ui-accordion');
+    dataSorting();
+    xScroll('.bar-tab-wraps .scroll');
+</script>
+</html>

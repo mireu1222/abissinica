@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    @@include('./layout/head.html')
+</head>
+<body>
+    <div class="skip-navigation">
+        <a href="#container">메뉴 건너뛰기</a>
+    </div>
+    <div id="wrap">
+        <!-- header -->
+        @@include('./layout/header.html', {
+            cate07 : true,
+        })
+        <!-- // header -->
+
+        <!-- container -->
+        <div id="container" class="container cate07">
+            @@include('./layout/page-title.html', {
+                cate07 : true,
+                sub0702 : true,
+                title : '자주찾는질문'
+            })
+
+            <!-- page contents -->
+            <div class="contents">
+                <section>
+                    <div class="bar-tab-wraps">
+                        <div class="scroll">
+                            <ul class="tabs" data-type="sortingTab">
+                                <li class="active"><a href="#n" data-category-num="all">전체</a></li>
+                                <li><a href="#n" data-category-num="01">카테고리1</a></li>
+                                <li><a href="#n" data-category-num="02">카테고리2</a></li>
+                                <li><a href="#n" data-category-num="03">카테고리3</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    @@include('./modules/accordion-list.html')
+                </section>
+            </div>
+            <!-- // page contents -->
+        </div>
+        <!-- // container -->
+
+        <!-- footer -->
+        @@include('./layout/footer.html')
+        <!-- // footer -->
+    </div>
+</body>
+<script>
+    accordion('.ui-accordion');
+    dataSorting();
+    xScroll('.bar-tab-wraps .scroll');
+</script>
+</html>

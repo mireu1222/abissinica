@@ -1,0 +1,7 @@
+<div class="img-popup-list">
+    <ul@@if(context.center){ class="justify-content-center"}>
+        @@for(var i=0; i < list.length; i++){
+        <li><a href="#n" class="view-img" title="원본 이미지 새창 보기"><img src="/images/@@img-`+[i+1]+`.gif" alt="`+list[i]+`"></a></li>
+        }
+    </ul>
+</div>

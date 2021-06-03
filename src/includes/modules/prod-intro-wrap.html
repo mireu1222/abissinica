@@ -1,0 +1,26 @@
+<div class="prod-intro-wrap@@if(context.type2){ type2}">
+    <h5 class="prod-name">
+        @@name
+    </h5>
+    <div class="prod-cont">
+        <section>
+            <h6 class="prod-title">
+                @@title
+            </h6>
+            <div class="img-wrap@@if(context.border){ border}">
+                <img src="/images/img-@@img.jpg" alt=""> 
+            </div>
+        </section>
+        @@if(context.sect2) {
+        <section>
+            <h6 class="prod-title">
+                @@sect2.title
+            </h6>
+            <div class="img-wrap@@if(context.sect2.border){ border}">
+                <img src="/images/img-@@sect2.img.jpg" alt=""> 
+            </div>
+        </section>
+        }
+    </div>
+</div>
+<p class="info-text">일부 제품은 특정 지역에서 판매가 되지 않을 수도 있습니다.</p>

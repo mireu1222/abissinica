@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    @@include('./layout/head.html')
+</head>
+<body>
+    <div class="skip-navigation">
+        <a href="#container">메뉴 건너뛰기</a>
+    </div>
+    <div id="wrap">
+        <!-- header -->
+        @@include('./layout/header.html', {
+            cate05 : true,
+        })
+        <!-- // header -->
+
+        <!-- container -->
+        <div id="container" class="container cate05">
+            @@include('./layout/page-title.html', {
+                cate05 : true,
+                sub0501 : true,
+                title : '사업자구매안내'
+            })
+
+            <!-- page contents -->
+            <div class="contents">
+                <section>
+                    <div class="buisnessman-cont">
+                        <div class="hello">
+                            <div class="text">
+                                <p class="tit">아비시니카는<br>2002년부터 카페, 베이커리, 레스토랑, 호텔, 리조트에 커피를 공급해 왔습니다.</p>
+                                <p class="desc">
+                                    에스프레소 및 드립용 원두가 필요한 사업장에 고품질 커피를 신선하고 빠르게 준비합니다.<br>
+                                    아비시니카 커피와 파트너십을 맺으면 사업자에게 특별한 가격으로 공급하고 있습니다. 시그니처 블렌드와 다양한 산지별 커피를 특별한 가격에 주문할 수 있습니다.
+                                    로스터들을 위한 생두 도매 리스트도 준비되어 있습니다.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="infos">
+                            <dl>
+                                <dt>가입대상</dt>
+                                <dd>식음료 사업자(일반음식점, 휴게음식점)</dd>
+                            </dl>
+                            <dl>
+                                <dt>가입방법</dt>
+                                <dd>전화 상담 &gt; 온라인신청(사업자등록증 제출) &gt; 승인 &gt; 사업자회원으로 거래</dd>
+                            </dl>
+                            <dl>
+                                <dt>문의</dt>
+                                <dd>02-555-9331 (9:00~18:00, 점심시간 13:00~14:00)</dd>
+                            </dl>
+                            <dl>
+                                <dt>팩스</dt>
+                                <dd>02-555-9332</dd>
+                            </dl>
+                            <dl>
+                                <dt>이메일</dt>
+                                <dd>sale@www.abissinica.co.kr</dd>
+                            </dl>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <!-- // page contents -->
+        </div>
+        <!-- // container -->
+
+        <!-- footer -->
+        @@include('./layout/footer.html')
+        <!-- // footer -->
+    </div>
+</body>
+</html>

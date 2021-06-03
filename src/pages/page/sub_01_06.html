@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    @@include('./layout/head.html')
+</head>
+<body>
+    <div class="skip-navigation">
+        <a href="#container">메뉴 건너뛰기</a>
+    </div>
+    <div id="wrap">
+        <!-- header -->
+        @@include('./layout/header.html', {
+            cate01 : true,
+        })
+        <!-- // header -->
+
+        <!-- container -->
+        <div id="container" class="container cate01">
+            @@include('./layout/page-title.html', {
+                cate01 : true,
+                sub0106 : true,
+                title : '대외사업'
+            })
+
+            <!-- page contents -->
+            <div class="contents">
+                <section class="full">
+                    <div class="title-wrap">
+                        <h4 class="tit">한국전쟁참전국기념사업회</h4>
+                        <p class="desc">
+                            <span class="img"><img src="/images/img/img-ci.jpg" alt=""></span>
+                            사단법인 한국전쟁참전국기념사업회는 민법 제32조 및 국가보훈처 소관 비영이법인의 설립 및 감독에 관한 규칙에 따라 국가보훈처로부터 설립을 허가 받아,<br>
+                            한국전쟁 당시 한국의 자유와 평화를 위해 희생을 아끼지 않은 un참전국과 참전용사에 대한 보은활동을 보다 더 적극적으로 추진하고자 그 정신을 기리는 프로그램을 마련하고<br>이로서 한국인의 고마움을 전 세계에 알리고 참전국과의 평화적인 우호증진에 앞장서려고 합니다.
+                        </p>
+                    </div>
+                    <div class="bg-wrap" aria-hidden="true">
+                        <div class="img-layout">
+                            <span class="img1"><img src="/images/img/img-sub0106-1.jpg" alt=""></span>
+                            <span class="img2"><img src="/images/img/img-sub0106-2.jpg" alt=""></span>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <!-- // page contents -->
+        </div>
+        <!-- // container -->
+
+        <!-- footer -->
+        @@include('./layout/footer.html')
+        <!-- // footer -->
+    </div>
+    
+</body>
+</html>
