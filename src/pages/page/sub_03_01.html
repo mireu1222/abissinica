@@ -19,47 +19,55 @@
             @@include('./layout/page-title.html', {
                 cate03 : true,
                 sub0301 : true,
-                title : '커피공장카페 소개'
+                title : '커피공장 소개'
             })
 
             <!-- page contents -->
             <div class="contents">
-                <section class="full">
-                    <div class="cafe-intro type1">
-                        <div class="intro-hello">
-                            <p class="text ft-mj">A cafe where the story of the staying space becomes special.</p>
-                            <p class="tit"><span>머무르는 공간의 이야기가 특별해지는 카페</span></p>
-                        </div>
-                        <div class="intro-title">
-                            <h4>커피공장카페는 멋과 맛이 공존하는 카페입니다.</h4>
-                            <p class="desc">고급스러운 인테리어와 최고급 원두인 아비시니카를 전문으로 취급하고 있습니다.</p>
-                        </div>
-                        <div class="bg-wrap">
-                            <div class="visual-wrap">
-                                <p class="tit">
-                                    COFFEE FACTORY
-                                    <small>머무르는 공간의 이야기가 풍부할수록 기억은 더 특별해집니다.</small>
+                <section>
+                    <div class="introduce">
+                        <div class="box">
+                            <div class="text">
+                                <h4>에스프레소의 특징</h4>
+                                <p>
+                                    <span class="fw-bold">아로마 세이브 쿨링 기술</span> : 커피를 볶은 후 상온까지의 급속 냉각을 통하여, 커피 를 형성하고 있는 세포벽의 균열을 막고 스폰지화를 방지하여 커피가 갖고 있는  본연의 향기 성분과 맛 성분을 세포벽에 그대로 유지합니다.<br><br>
+
+                                    <span class="fw-bold">AK 혼합 블랜딩 기술 적용</span> : 로스팅 드럼 한 배치 내에 여러 종류의 커피를 블랜  딩하여 로스팅하므로 성질이 다른 각각의 콩의 성질 및 색깔을 균질화 하였습니다.
                                 </p>
-                                <div class="swiper-container">
-                                    <div class="swiper-wrapper">
-                                        <div class="swiper-slide">
-                                            <img src="/images/img/img-sub0301-visual01.jpg" alt="">
-                                        </div>
-                                        <div class="swiper-slide">
-                                            <img src="/images/img/img-sub0301-visual02.jpg" alt="">
-                                        </div>
-                                        <div class="swiper-slide">
-                                            <img src="/images/img/img-sub0301-visual03.jpg" alt="">
-                                        </div>
-                                    </div>
-                                    <div class="swiper-control">
-                                        <div class="control-btn prev"><span class="blind">PREV</span></div>
-                                        <div class="control-btn next"><span class="blind">NEXT</span></div>
-                                    </div>
-                                </div>
                             </div>
+                            <span class="thumb" aria-hidden="true"><img src="/images/img/img-sub0301-1.jpg" alt=""></span>
                         </div>
                     </div>
+                </section>
+                <section>
+                    <ul class="img-lists">
+                        <li><img src="/images/img/img-sub0301-3.jpg" alt=""></li>
+                        <li><img src="/images/img/img-sub0301-4.jpg" alt=""></li>
+                        <li><img src="/images/img/img-sub0301-5.jpg" alt=""></li>
+                    </ul>
+                </section>
+                <section>
+                    <div class="introduce">
+                        <div class="box type2">
+                            <div class="text">
+                                <h4>커피에 있어 아비시니카는 다릅니다</h4>
+                                <p>
+                                    에티오피아 정부에서 운영하는 커피연구소와 이태리에서 유학하고, 그곳에서 인증하는 커피관련 자격증을 갖춘 전문인으로 구성된 Coffee Lab의 운영으로, 새로운 제품의 개발과 지속 적인 품질관리를 이루고 있습니다. <br><br>
+
+                                    나만의 특별한 커피를 추구하는 개성 넘치는 소비자들을 위해 70여종의 다양한 제품들과 새롭게 개선된 신제품들을 꾸준히 생산하고 있습니다.<br><br>
+
+                                    생두 수입부터 포장, 배송까지 원스톱 시스템을 통해 주문 접수 후 로스팅하여 최적의 포장 용기에 담아 출고하므로 항상 최고의 신선함을 유지합니다.
+                                </p>
+                            </div>
+                            <span class="thumb" aria-hidden="true"><img src="/images/img/img-sub0301-2.jpg" alt=""></span>
+                        </div>
+                    </div>
+                </section>
+                <section>
+                    <ul class="img-lists">
+                        <li><img src="/images/img/img-sub0301-6.jpg" alt=""></li>
+                        <li><img src="/images/img/img-sub0301-7.jpg" alt=""></li>
+                    </ul>
                 </section>
             </div>
             <!-- // page contents -->
@@ -71,16 +79,4 @@
         <!-- // footer -->
     </div>
 </body>
-<script>
-    const imgSlider = new Swiper('.visual-wrap .swiper-container', {
-        autoplay : {
-            delay : 5000
-        },
-        loop : true,
-        navigation : {
-            nextEl : '.visual-wrap .control-btn.next',
-            prevEl : '.visual-wrap .control-btn.prev',
-        }
-    });
-</script>
 </html>

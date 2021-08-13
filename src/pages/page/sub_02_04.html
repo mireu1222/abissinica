@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    @@include('./layout/head.html')
+</head>
+<body>
+    <div class="skip-navigation">
+        <a href="#container">메뉴 건너뛰기</a>
+    </div>
+    <div id="wrap">
+        <!-- header -->
+        @@include('./layout/header.html', {
+            cate02 : true,
+        })
+        <!-- // header -->
+
+        <!-- container -->
+        <div id="container" class="container cate02">
+            @@include('./layout/page-title.html', {
+                cate02 : true,
+                sub0204 : true,
+                title : '춘천커피'
+            })
+
+            <!-- page contents -->
+            <div class="contents">
+                <section>
+                    <div class="introduce">
+                        <div class="box">
+                            <div class="text">
+                                <h4>춘천 커피 스토리</h4>
+                                <p>
+                                    춘천에서 처음으로 시작된 소위 원두커피는 역시 한국전쟁과 무관하지 않다.<br><br>
+
+                                    UN 참전국의 일원으로 참전한 에티오피아를 기리기 위해 에티오피아 참전기념비를 춘천에 건립했다.<br><br>
+                                    
+                                    이에 1968년 춘천을 방문한 당시 셀라시에 황제가 기념관 건립을 요청했고 이를 <이디오피아 벳(집)>이라 이름 지었다.<br><br>
+                                    
+                                    이후 본국으로 돌아간 황제는 외교부를 통해 직접 커피 생두를 보내왔고, 이것이 계기가 되어 우리나라 최초의 로스터리 커피 전문점이 문을 연 것이다. 
+                                </p>
+                            </div>
+                            <span class="thumb" aria-hidden="true"><img src="/images/img/img-sub0204-1.jpg" alt=""></span>
+                        </div>
+                        <div class="box type2">
+                            <div class="text">
+                                <h4>이디오피아의 집</h4>
+                                <p>
+                                    춘천에 있는 <이디오피아의 집>은 7, 80년 당시 원두커피 맛을 보려는 전국의 젊은이들로 붐벼 문전성시를 이루었고, 춘천에 주둔한 미군 부대 <캠프페이지> 역시 그들의 커피문화를 춘천으로 쏟아내면서 춘천은 그야말로 커피의 도시로 성장하게 된다.<br><br>
+
+                                    따라서 현재 춘천에 공장을 두고 있는 <아비시나카>가 춘천에 소재하는 것은 이런 연유를 생각해 보면 자연스러운 일이면서도 또 한편으로는 당연한 일인지도 모른다. - 주진
+                                </p>
+                            </div>
+                            <span class="thumb" aria-hidden="true"><img src="/images/img/img-sub0204-2.jpg" alt=""></span>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <!-- // page contents -->
+        </div>
+        <!-- // container -->
+
+        <!-- footer -->
+        @@include('./layout/footer.html')
+        <!-- // footer -->
+    </div>
+</body>
+</html>

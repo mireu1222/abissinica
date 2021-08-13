@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    @@include('./layout/head.html')
+</head>
+<body>
+    <div class="skip-navigation">
+        <a href="#container">메뉴 건너뛰기</a>
+    </div>
+    <div id="wrap">
+        <!-- header -->
+        @@include('./layout/header.html', {
+            cate02 : true,
+        })
+        <!-- // header -->
+
+        <!-- container -->
+        <div id="container" class="container cate02">
+            @@include('./layout/page-title.html', {
+                cate02 : true,
+                sub0202 : true,
+                title : '에티오피아 커피'
+            })
+
+            <!-- page contents -->
+            <div class="contents">
+                <section>
+                    <div class="introduce">
+                        <div class="box">
+                            <div class="text">
+                                <h4>에티오피아 커피</h4>
+                                <p>
+                                    전세계 커피의 원산지는 에티오피아 입니다.<br>
+                                    에티오피아의 커피는 약 95%가 소규모 농원이나 숲에서 야생의 상태로 자라기 때문에 비료나 농약을 사용하지 않습니다.<br>
+                                    거의 모든 나무가 유기농으로 재배되고 있는 것입니다.<br>
+                                    그 중 우리가 모카라고 부르는 커피는 고원 남부를 중심으로  하는 야생(일부는 재배) 커피입니다. <br><br>
+
+                                    남부는 커피의 기원지로,  커피의 맛과 향기가 뛰어납니다.<br>
+                                    이 곳에서 아라비아 상인들에 의하여 반출된 커피가 아라비아  예멘의 모카항(항)에서 세계 각지로 수출되었기 때문에 커피의  원산지가 아라비아로 여겨졌습니다.
+                                </p>
+                            </div>
+                            <span class="thumb" aria-hidden="true"><img src="/images/img/img-sub0202-1.jpg" alt=""></span>
+                        </div>
+                    </div>
+                    <ul class="img-lists type2">
+                        <li><img src="/images/img/img-sub0202-2.jpg" alt=""></li>
+                        <li><img src="/images/img/img-sub0202-3.jpg" alt=""></li>
+                        <li><img src="/images/img/img-sub0202-4.jpg" alt=""></li>
+                    </ul>
+                    <p class="desc-txt">주문 즉시 산지에서 직접 도정 후 아비시니카 커피 컨텐츠 그룹을 위한 특별 포장 및 관리가 이루어 집니다.</p>
+                    <div class="sub0202">
+                        <h4 class="org-title type2">왜, 커피시장에는 에티오피아 생두가 필요한가요?</h4>
+                        <div class="flex">
+                            <ul class="rs-lists">
+                                <li>
+                                    <p class="eyebrow">REASON 1</p>
+                                    <div class="box">
+                                        <p class="tit">모카 커피를 <br>만들기 위해</p>
+                                        <p class="desc">모카커피를 만들기 위해서는 에티오피아산 생두가 브랜딩 되어야 만들 수 있습니다!</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <p class="eyebrow">REASON 2</p>
+                                    <div class="box">
+                                        <p class="tit">야생종 <br>자연 채집</p>
+                                        <p class="desc">유기농이 대세인 현시대에서 재배와 농약사용이 전혀 이뤄지지  않는 유일한 곳!</p>
+                                    </div>
+                                </li>
+                            </ul>
+                            <div class="text">
+                                <p>
+                                    에티오피아는 사회주의 국가로써 커피사업을 국가통제 하에 이뤄지고 있습니다.<br>
+                                    기존의 우리나라는 일본, 미국, 호주에서 에티오피아산 생두를 수입하여 사용하고 었습니다. 그러나 현재 아비시니카커피컨텐츠그룹은 에티오피아 정부의 도움으로 정식적으로 생두를 수입하고 있습니다.<br><br>
+    
+                                    이디오피아한국전참전용사후원회'에서 '아비시니카커피컨텐츠그룹' 설립하게 되었으며, 에티오피아 정부의 정식 인증을 통해 독자적 커피생두를 수입하고 있습니다.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <!-- // page contents -->
+        </div>
+        <!-- // container -->
+
+        <!-- footer -->
+        @@include('./layout/footer.html')
+        <!-- // footer -->
+    </div>
+</body>
+</html>

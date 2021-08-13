@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    @@include('./layout/head.html')
+</head>
+<body>
+    <div class="skip-navigation">
+        <a href="#container">메뉴 건너뛰기</a>
+    </div>
+    <div id="wrap">
+        <!-- header -->
+        @@include('./layout/header.html', {
+            cate07 : true,
+        })
+        <!-- // header -->
+
+        <!-- container -->
+        <div id="container" class="container cate07">
+            @@include('./layout/page-title.html', {
+                cate07 : true,
+                sub0704 : true,
+                title : '홍보자료'
+            })
+
+            <!-- page contents -->
+            <div class="contents">
+                <section>
+                    <div class="masonry-list-wrap">
+                        <div class="item-wrap">
+                            @@loop('./modules/masonry-list.html', [
+                                {
+                                    thumbType : true,
+                                    link : '/page/sub_06_01_view.html'
+                                }, {
+
+                                }, {
+                                    videoType : true, 
+                                    video : 'https://www.youtube.com/embed/Ia__XhnQ_W8'
+                                }, {
+                                    thumbType : true,
+                                    link : '/page/sub_06_01_view.html'
+                                }, {
+                                    
+                                }, {
+                                    videoType : true, 
+                                    video : 'https://www.youtube.com/embed/Ia__XhnQ_W8'
+                                }
+                            ])
+                        </div>
+                    </div>
+                    @@include('./modules/pagination.html')
+                </section>
+            </div>
+            <!-- // page contents -->
+        </div>
+        <!-- // container -->
+
+        <!-- footer -->
+        @@include('./layout/footer.html')
+        <!-- // footer -->
+    </div>
+
+    <!-- video modal -->
+    <div id="video" class="video-modal-area" style="display:none;">
+        <div class="video-area">
+            <iframe width="100%" height="100%" src="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+        </div>
+        <div class="video-info">
+            <p class="tit">&nbsp;</p>
+            <p class="desc">&nbsp;</p>
+            <p class="date">&nbsp;</p>
+        </div>
+        <button type="button" class="btn-close"><span class="blind">닫기</span></button>
+    </div>
+    <!-- // video modal -->
+</body>
+<script>
+    $(function() {
+        // masonry
+        $('.masonry-list-wrap .item-wrap').masonry({
+            itemSelector: '.items',
+            percentPosition: true,
+            horizontalOrder: true
+        });
+        // video modal
+        videoModal();
+    });
+</script>
+</html>

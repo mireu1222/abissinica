@@ -184,3 +184,27 @@
         }
     }
 }
+.container.cate03 {
+    .img-lists {
+        display:flex;
+        li {
+            flex:1;
+            @include calcs(margin-left, 20px, 1280px);
+            &:first-child {
+                margin-left:0;
+            }
+        }
+        @include mobile {
+            flex-wrap:wrap;
+            li {
+                flex:unset;
+                width:49%;
+                margin:0;
+                margin-top:2%;
+                &:nth-child(even) {
+                    margin-left:2%;
+                }
+            }
+        }
+    }
+}

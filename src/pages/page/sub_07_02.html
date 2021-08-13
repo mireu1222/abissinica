@@ -19,23 +19,20 @@
             @@include('./layout/page-title.html', {
                 cate07 : true,
                 sub0702 : true,
-                title : '자주찾는질문'
+                title : '1:1문의'
             })
 
             <!-- page contents -->
             <div class="contents">
                 <section>
-                    <div class="bar-tab-wraps">
-                        <div class="scroll">
-                            <ul class="tabs" data-type="sortingTab">
-                                <li class="active"><a href="#n" data-category-num="all">전체</a></li>
-                                <li><a href="#n" data-category-num="01">카테고리1</a></li>
-                                <li><a href="#n" data-category-num="02">카테고리2</a></li>
-                                <li><a href="#n" data-category-num="03">카테고리3</a></li>
-                            </ul>
-                        </div>
+                    @@include('./modules/input-table.html', {
+                        sub0702 : true,
+                        caption : '1:1문의',
+                        agree : true,
+                    })
+                    <div class="btn-group">
+                        <button type="submit" class="btn btn-point btn-lg"><span>문의 등록</span></button>
                     </div>
-                    @@include('./modules/accordion-list.html')
                 </section>
             </div>
             <!-- // page contents -->
@@ -47,9 +44,4 @@
         <!-- // footer -->
     </div>
 </body>
-<script>
-    accordion('.ui-accordion');
-    dataSorting();
-    xScroll('.bar-tab-wraps .scroll');
-</script>
 </html>

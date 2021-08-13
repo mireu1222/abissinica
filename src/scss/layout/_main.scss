@@ -193,6 +193,7 @@
         }
         @include tablet {
             .col {
+                display:block;
                 position:relative;
                 padding:45px 0 60px;
                 background-repeat:no-repeat;

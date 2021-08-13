@@ -183,9 +183,9 @@
         }
         > section {
             @include contArea;
-            margin-top:150px;
+            margin-top:110px;
             @include mobile {
-                margin-top:80px;
+                margin-top:60px;
             }
             &.full {
                 max-width:100%;
@@ -257,6 +257,171 @@
                         br {
                             display:none;
                         }
+                    }
+                }
+            }
+        }
+        .introduce {
+            .box {
+                display:flex;
+                align-items:flex-start;
+                justify-content:space-between;
+                margin-top:100px;
+                @include mobile {
+                    display:block;
+                    margin-top:50px;
+                }
+                &:first-child {
+                    margin-top:0;
+                }
+                .thumb {
+                    order:1;
+                    display:block;
+                    width:50%;
+                    @include mobile {
+                        width:100%;
+                        margin-top:10px;
+                    }
+                }
+                .text {
+                    width:calc(50% - 30px);
+                    @include mobile {
+                        width:100%;
+                    }
+                    h4 {
+                        position:relative;
+                        color:$point2;
+                        font-size:40px;
+                        line-height:1.2;
+                        font-weight:900;
+                        letter-spacing:-2px;
+                        word-break:keep-all;
+                        &::before {
+                            content:'ABISSINICA';
+                            display:block;
+                            color:rgba($cont, .4);
+                            font-size:30px;
+                            line-height:1;
+                            font-weight:100;
+                            letter-spacing:-1px;
+                        }
+                        @include mobile {
+                            font-size:28px;
+                            &::before {
+                                font-size:20px;
+                                letter-spacing:0;
+                            }
+                        }
+                    }
+                    p {
+                        position:relative;
+                        margin-top:30px;
+                        padding-top:31px;
+                        color:$cont;
+                        @include font;
+                        word-break:keep-all;
+                        em {
+                            display:block;
+                            margin-bottom:24px;
+                            font-weight:700;
+                            span.ft-noto {
+                                font-weight:500;
+                            }
+                        }
+                        &::after {
+                            content:' ';
+                            position:absolute;
+                            top:0;
+                            left:0;
+                            right:-120px;
+                            height:1px;
+                            background:$border;
+                        }
+                        @include mobile {
+                            margin-top:10px;
+                            padding-top:10px;
+                            border-top:1px solid $border;
+                            &::after {
+                                display:none;
+                            }
+                        }
+                    }
+                }
+                &.type2 {
+                    .thumb {
+                        order:-1;
+                    }
+                    .text {
+                        p::after {
+                            right:0;
+                            left:-120px;
+                        }
+                    }
+                }
+            }
+        }
+        h4.org-title {
+            position:relative;
+            padding-bottom:28px;
+            color:$point2;
+            font-size:40px;
+            line-height:1.2;
+            letter-spacing:-2px;
+            font-weight:900;
+            word-break:keep-all;
+            @include mobile {
+                font-size:28px;
+                padding-bottom:9px;
+            }
+            &::after {
+                content:' ';
+                position:absolute;
+                left:0;
+                bottom:0;
+                width:calc(50% + 90px);
+                height:1px;
+                background:$border;
+                @include mobile {
+                    width:100%;
+                }
+            }
+            &.type2 {
+                text-align:right;
+                @include mobile {
+                    text-align:left;
+                }
+                &::after {
+                    left:auto;
+                    right:0;
+                    @include mobile {
+                        width:100%;
+                    }
+                }
+            }
+            &.type3 {
+                text-align:center;
+                &::before {
+                    content:'ABISSINICA';
+                    display:block;
+                    color:rgba($cont, .4);
+                    font-size:30px;
+                    line-height:1;
+                    font-weight:100;
+                    letter-spacing:-1px;
+                }
+                @include mobile {
+                    &::before {
+                        font-size:20px;
+                        letter-spacing:0;
+                    }
+                }
+                &::after {
+                    width:140px;
+                    left:50%;
+                    margin-left:-70px;
+                    @include mobile {
+                        width:70px;
+                        margin-left:-35px;
                     }
                 }
             }

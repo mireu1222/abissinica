@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    @@include('./layout/head.html')
+</head>
+<body>
+    <div class="skip-navigation">
+        <a href="#container">메뉴 건너뛰기</a>
+    </div>
+    <div id="wrap">
+        <!-- header -->
+        @@include('./layout/header.html', {
+            cate06 : true,
+        })
+        <!-- // header -->
+
+        <!-- container -->
+        <div id="container" class="container cate06">
+            @@include('./layout/page-title.html', {
+                cate06 : true,
+                sub0605 : true,
+                title : 'CI/BI'
+            })
+
+            <!-- page contents -->
+            <div class="contents">
+                <section>
+                    <div class="cibi-cont">
+                        <div class="box">
+                            <img src="/images/img/img-sub0602-1.jpg" alt="">
+                        </div>
+                        <h4>컬러타입로고(세로형/가로형)</h4>
+                        <div class="box flex">
+                            <span><img src="/images/img/img-logo-color01.jpg" alt=""></span>
+                            <span><img src="/images/img/img-logo-color02.jpg" alt=""></span>
+                        </div>
+                        <h4>모노타입로고(세로형/가로형)</h4>
+                        <div class="box flex">
+                            <span><img src="/images/img/img-logo-bw01.jpg" alt=""></span>
+                            <span><img src="/images/img/img-logo-bw02.jpg" alt=""></span>
+                        </div>
+                        <h4>컬러</h4>
+                        <div class="colorchip">
+                            <div class="col">
+                                <span class="color1">
+                                    RGB 97+108+69<br>C60+M41+Y80+K25
+                                </span>
+                                <span class="color2">
+                                    RGB 254+200+78<br>C1+M22+Y80+K0
+                                </span>
+                            </div>
+                            <div class="col">
+                                <span class="color3">
+                                    RGB 35+31+32<br>C70+M68+Y64+K74
+                                </span>
+                                <span class="color4">
+                                    RGB 147+149+152<br>C45+M36+Y35+K1
+                                </span>
+                            </div>
+                        </div>
+                        <div class="btn-group high">
+                            <a href="#n" class="btn btn-lg btn-border-basic fw-bold"><span>AI Download</span></a>
+                            <a href="#n" class="btn btn-lg btn-border-basic fw-bold"><span>JPG Download</span></a>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <!-- // page contents -->
+        </div>
+        <!-- // container -->
+
+        <!-- footer -->
+        @@include('./layout/footer.html')
+        <!-- // footer -->
+    </div>
+</body>
+</html>

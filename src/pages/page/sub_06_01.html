@@ -19,36 +19,75 @@
             @@include('./layout/page-title.html', {
                 cate06 : true,
                 sub0601 : true,
-                title : '홍보자료'
+                title : '회사개요'
             })
 
             <!-- page contents -->
             <div class="contents">
                 <section>
-                    <div class="masonry-list-wrap">
-                        <div class="item-wrap">
-                            @@loop('./modules/masonry-list.html', [
-                                {
-                                    thumbType : true,
-                                    link : '/page/sub_06_01_view.html'
-                                }, {
-
-                                }, {
-                                    videoType : true, 
-                                    video : 'https://www.youtube.com/embed/Ia__XhnQ_W8'
-                                }, {
-                                    thumbType : true,
-                                    link : '/page/sub_06_01_view.html'
-                                }, {
+                    <div class="introduce">
+                        <div class="box">
+                            <div class="text">
+                                <h4>아비시니카 소개</h4>
+                                <p>
+                                    아비시니카는 “에티오피아의 모카” 라는 의미이며, “아비시니아(에티오피아의 옛 이름)의 커피”란 뜻으로 에티오피아에서 생산되는 모든 커피에 붙여지는 에티오피아 국가 브랜드 입니다.<br>
+                                    에티오피아 정부가 한국 및 (사)한국전쟁참전국기념사업회(회장 신광철) 와의 우호친선을 위해 현재는 ㈜아비시니카유니온에서 독점적으로 사용하고 있습니다.<br><br>
                                     
-                                }, {
-                                    videoType : true, 
-                                    video : 'https://www.youtube.com/embed/Ia__XhnQ_W8'
-                                }
-                            ])
+                                    에티오피아정부로부터 인증받은 국내 유일의 정식 커피수입회사 아비시니카는 20년이란 긴 기간 동안 NGO봉사활동을 통해 에티오피아정부와 굳은 신뢰의 바탕에서 일구어진 회사입니다. 커피 산지 에티오피아 인의 작은 손 안의 가득한 마음들이 담긴 회사이기에, 더더욱 이를  자부심으로 끊임 없는 열정과 노력을 기울이고 있습니다.
+                                </p>
+                            </div>
+                            <span class="thumb" aria-hidden="true"><img src="/images/img/img-sub0601-1.jpg" alt=""></span>
                         </div>
                     </div>
-                    @@include('./modules/pagination.html')
+                </section>
+                <section>
+                    <ul class="img-lists">
+                        <li><img src="/images/img/img-sub0601-3.jpg" alt=""></li>
+                        <li><img src="/images/img/img-sub0601-4.jpg" alt=""></li>
+                        <li><img src="/images/img/img-sub0601-5.jpg" alt=""></li>
+                        <li><img src="/images/img/img-sub0601-6.jpg" alt=""></li>
+                        <li><img src="/images/img/img-sub0601-7.jpg" alt=""></li>
+                    </ul>
+                </section>
+                <section>
+                    <div class="introduce">
+                        <div class="box type2">
+                            <div class="text">
+                                <h4>착한 소비, 아비시니카 커피</h4>
+                                <p>
+                                    “한국전쟁에 참전해 함께 싸운 친구 국가들을 기억하고 그들에게 은혜를 갚아야 한다는 마음으로 커피를 만듭니다.”<br><br>
+
+                                    국내 유일의 에티오피아 커피 직수입 브랜드인 “아비시니카유니온(회장 신광철)”은 한국전쟁에 참전한 참전용사를 후원하고 있습니다.<br>
+                                    1996년부터 에티오피아 한국전 참전용사 후원회(회장 손숙)를 만들고, 2000년에는 에티오피아 커피를 수입해 가공하는 회사 ‘아비시니카’를 세우고 수익으로 참전용사들의 생활비를 후원하며,  에티오피아를 포함해 참전국 16개국, 의료지원국 6개국, 물자지원국 38개국에 관심을 두고 돕고 있습니다.<br><br>
+
+                                    한국전쟁 참전국에 감사하는 마음으로, 신광철 회장은 에티오피아 등 한국전 참전 및 지원국 28개국에서 35종의 생두를 수입해 70여 가지의 커피 제품을 판매하고 있습니다. 참전국들 중 에티오피아 등 경제적으로 힘든 국가들의 참전 용사들에게 조금이나마 후원을 확대하고 경제적으로 도움이 되기 위해서 입니다.<br><br>
+                                    <img src="/images/img/img-sub0601-15.jpg" alt="">
+                                </p>
+                            </div>
+                            <span class="thumb" aria-hidden="true"><img src="/images/img/img-sub0601-2.jpg" alt=""></span>
+                        </div>
+                    </div>
+                </section>
+                <section>
+                    <ul class="img-lists">
+                        <li><img src="/images/img/img-sub0601-8.jpg" alt=""></li>
+                        <li><img src="/images/img/img-sub0601-9.jpg" alt=""></li>
+                        <li><img src="/images/img/img-sub0601-10.jpg" alt=""></li>
+                        <li><img src="/images/img/img-sub0601-11.jpg" alt=""></li>
+                        <li><img src="/images/img/img-sub0601-12.jpg" alt=""></li>
+                    </ul>
+                </section>
+                <section>
+                    <h4 class="org-title">아비시니카코리아 사업부지 &amp; 공장전경</h4>
+                    <div class="img-only">
+                        <img src="/images/img/img-sub0601-13.jpg" alt="">
+                    </div>
+                </section>
+                <section>
+                    <h4 class="org-title type2">제이콥스스테이션</h4>
+                    <div class="img-only">
+                        <img src="/images/img/img-sub0601-14.jpg" alt="">
+                    </div>
                 </section>
             </div>
             <!-- // page contents -->
@@ -59,30 +98,5 @@
         @@include('./layout/footer.html')
         <!-- // footer -->
     </div>
-    <!-- video modal -->
-    <div id="video" class="video-modal-area" style="display:none;">
-        <div class="video-area">
-            <iframe width="100%" height="100%" src="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
-        </div>
-        <div class="video-info">
-            <p class="tit">&nbsp;</p>
-            <p class="desc">&nbsp;</p>
-            <p class="date">&nbsp;</p>
-        </div>
-        <button type="button" class="btn-close"><span class="blind">닫기</span></button>
-    </div>
-    <!-- // video modal -->
 </body>
-<script>
-    $(function() {
-        // masonry
-        $('.masonry-list-wrap .item-wrap').masonry({
-            itemSelector: '.items',
-            percentPosition: true,
-            horizontalOrder: true
-        });
-        // video modal
-        videoModal();
-    });
-</script>
 </html>
