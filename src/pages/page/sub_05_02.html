@@ -19,19 +19,256 @@
             @@include('./layout/page-title.html', {
                 cate05 : true,
                 sub0502 : true,
-                title : '사업자회원신청'
+                title : '생두'
             })
 
             <!-- page contents -->
             <div class="contents">
                 <section>
-                    @@include('./modules/input-table.html', {
-                        caption : '사업자회원신청',
-                        sub0502 : true,
-                        agree : true,
-                    })
-                    <div class="btn-group">
-                        <button type="submit" class="btn btn-point btn-lg"><span>신청</span></button>
+                    <div class="sub05">
+                        <div class="head">
+                            <span class="thumb" aria-hidden="true"><img src="/images/img/img-sub0502-1.jpg" alt=""></span>
+                            <div class="text">
+                                <p class="tit">안녕하세요.<br>아비시니카를 찾아주셔서 감사합니다.</p>
+                                <p class="desc">커피에 있어 아비시니카는 다릅니다.<br>아비시니카는 에티오피아의 국가 브랜드이자 에티오피아 정부로부터 인증 받은 국내 유일의 에티오피아 커피 직수입 브랜드 입니다.</p>
+                            </div>
+                        </div>
+                        <div class="body type2">
+                            <div class="flex">
+                                <div class="box">
+                                    <p class="tit">아비시니카의 커피 생두 공급 원칙</p>
+                                    <ul class="bullet-list dot">
+                                        <li>중계 무역상을 거치지 않으므로 최상의 신선도 유지</li>
+                                        <li>주문과 동시에 도정, 항상 신선한 생두 공급 가능</li>
+                                        <li>매월 직수입 방식으로 안정된 공급 유지</li>
+                                        <li>에티오피아 현지와 직공급 및 현지 가격 연동 체계로 가격 합리화</li>
+                                        <li>매월 직수입 방식으로 신선하고 안정적인 생두 공급</li>
+                                    </ul>
+                                </div>
+                                <div class="box">
+                                    <p class="tit">아비시니카의 커피 생두는 다양하게 소비되고 있습니다</p>
+                                    <ul class="bullet-list dot">
+                                        <li> 대기업인 음료회사</li>
+                                        <li>주요 생두 수입, 유통회사</li>
+                                        <li>카페 프랜차이즈 브랜드</li>
+                                        <li>원두 가공 업체</li>
+                                        <li>개인 로스터리카페</li>
+                                        <li>커피 동호회</li>
+                                        <li>일반 커피 취미생활자</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="btn-group">
+                            <a href="" class="btn btn-lg btn-border-point"><span>신청 및 문의</span></a>
+                        </div>
+                    </div>
+                </section>
+                <section>
+                    <div class="about-coffee">
+                        <div class="title">
+                            <div class="text">
+                                <h4>생두<small>Green Bean</small></h4>
+                                <p>한국전쟁과 인연을 맺은 28개국에서<br>한국과의 친선 및 우호증진을 위해 좋은 생두를 선별해 보내주어<br>우수한 품질의 생두를 받고 있습니다.</p>
+                            </div>
+                            <div class="img align-right">
+                                <img src="/images/img/img-sub0502-2.jpg" alt="생두">
+                            </div>
+                        </div>
+                        <div class="about-contents">
+                            @@include('./modules/bean-list.html', {
+                                e : 'AFRICA',
+                                k : '아프리카',
+                                desc : '열대과일 향과 꽃 향기가 조화된 천연적인 풍미가 특징',
+                                color : 'brown',
+                                lists : [
+                                    {
+                                        img : 'sub0502-3',
+                                        name : '에티오피아 짐마 봉가 G3 내추럴',
+                                        ename : 'ethiopia djimma bonga g3 natural',
+                                        desc : '세계 최초로 커피가 발견된 커피의 고향,<br>짐마(DIMMAH)! 의외로 고소한 맛과<br>모카커피의 느낌이 살짝 남<br>짐마는 에티오피아 5대 커피 재배 지역 중 하나',
+                                        flag : 'strawberry/peach/fruity acidity/prune apriccot/chocolate/rose milk tea',
+                                        op1 : '1,700m',
+                                        op2 : 'djimma',
+                                        op3 : 'natural',
+                                        op4 : '10월-2월',
+                                    },
+                                    {
+                                        img : 'sub0502-4',
+                                        name : '에티오피아 하라 G4 내추럴',
+                                        ename : 'ethiopia harrar g4 natural',
+                                        desc : '"에티오피아의 축복"<br>에티오피아 하라는 높은 명성과 제한된 생산량으로 인해 등급에 비해 가격은 높으나 그 맛과<br>향으로 인하여 전세계에서 사랑받는 프리미엄 커피',
+                                        flag : 'berry-like/cereal/molasses/dark chocolate',
+                                        op1 : '2,100m-2,300m',
+                                        op2 : 'harrar',
+                                        op3 : 'natural',
+                                        op4 : '11월-2월',
+                                    },
+                                    {
+                                        img : 'sub0502-5',
+                                        name : '에티오피아 리무 G2 워시드',
+                                        ename : 'ethiopia limu g2 washed',
+                                        desc : '리무 생두는 중간 크기로 둥근 형태이며 푸른<br>빛을 띄며, 미국과 유럽에서 각광받는 커피로<br>SPICY하며 톡 쏘는 와인 풍미와 달콤함과 균형<br>잡힌 농도로 세계에서 카페인이 가장 적은 커피',
+                                        flag : 'nutty/chocolate/tropical fruit/winy clean',
+                                        op1 : '1,800m-2,100m',
+                                        op2 : 'limu',
+                                        op3 : 'washed',
+                                        op4 : '12월-3월',
+                                    },
+                                    {
+                                        img : 'sub0502-6',
+                                        name : '에티오피아 시다모 G2 워시드',
+                                        ename : 'ethiopia sidamo g2 washed',
+                                        desc : '전반적으로 느낄 수 있는 꽃 및 과일 늬앙스의<br>아루마! 강하면서도 부드럽게 다가오는 산미와<br>입안가득 가볍게 퍼지는 단맛과<br>커피의 깔끔한 뒷맛이 특징',
+                                        flag : 'fruity/tangerine/roasted walnut/syrupy/herb tea',
+                                        op1 : '1,750m-2,200m',
+                                        op2 : 'sidamo',
+                                        op3 : 'washed',
+                                        op4 : '11월-2월',
+                                    },
+                                    {
+                                        img : 'sub0502-3',
+                                        name : '에티오피아 짐마 봉가 G3 내추럴',
+                                        ename : 'ethiopia djimma bonga g3 natural',
+                                        desc : '세계 최초로 커피가 발견된 커피의 고향,<br>짐마(DIMMAH)! 의외로 고소한 맛과<br>모카커피의 느낌이 살짝 남<br>짐마는 에티오피아 5대 커피 재배 지역 중 하나',
+                                        flag : 'strawberry/peach/fruity acidity/prune apriccot/chocolate/rose milk tea',
+                                        op1 : '1,700m',
+                                        op2 : 'djimma',
+                                        op3 : 'natural',
+                                        op4 : '10월-2월',
+                                    },
+                                    {
+                                        img : 'sub0502-4',
+                                        name : '에티오피아 하라 G4 내추럴',
+                                        ename : 'ethiopia harrar g4 natural',
+                                        desc : '"에티오피아의 축복"<br>에티오피아 하라는 높은 명성과 제한된 생산량으로 인해 등급에 비해 가격은 높으나 그 맛과<br>향으로 인하여 전세계에서 사랑받는 프리미엄 커피',
+                                        flag : 'berry-like/cereal/molasses/dark chocolate',
+                                        op1 : '2,100m-2,300m',
+                                        op2 : 'harrar',
+                                        op3 : 'natural',
+                                        op4 : '11월-2월',
+                                    },
+                                    {
+                                        img : 'sub0502-5',
+                                        name : '에티오피아 리무 G2 워시드',
+                                        ename : 'ethiopia limu g2 washed',
+                                        desc : '리무 생두는 중간 크기로 둥근 형태이며 푸른<br>빛을 띄며, 미국과 유럽에서 각광받는 커피로<br>SPICY하며 톡 쏘는 와인 풍미와 달콤함과 균형<br>잡힌 농도로 세계에서 카페인이 가장 적은 커피',
+                                        flag : 'nutty/chocolate/tropical fruit/winy clean',
+                                        op1 : '1,800m-2,100m',
+                                        op2 : 'limu',
+                                        op3 : 'washed',
+                                        op4 : '12월-3월',
+                                    },
+                                    {
+                                        img : 'sub0502-6',
+                                        name : '에티오피아 시다모 G2 워시드',
+                                        ename : 'ethiopia sidamo g2 washed',
+                                        desc : '전반적으로 느낄 수 있는 꽃 및 과일 늬앙스의<br>아루마! 강하면서도 부드럽게 다가오는 산미와<br>입안가득 가볍게 퍼지는 단맛과<br>커피의 깔끔한 뒷맛이 특징',
+                                        flag : 'fruity/tangerine/roasted walnut/syrupy/herb tea',
+                                        op1 : '1,750m-2,200m',
+                                        op2 : 'sidamo',
+                                        op3 : 'washed',
+                                        op4 : '11월-2월',
+                                    },
+                                ]
+                            })
+                            @@include('./modules/bean-list.html', {
+                                e : 'NORTH AMERICA AND LATIN AMERICA',
+                                k : '북미 및 중남미',
+                                desc : '코코넛&middot;너트 향과 고소한 맛이 특징',
+                                color : 'green',
+                                lists : [
+                                    {
+                                        img : 'sub0502-3',
+                                        name : '에티오피아 짐마 봉가 G3 내추럴',
+                                        ename : 'ethiopia djimma bonga g3 natural',
+                                        desc : '세계 최초로 커피가 발견된 커피의 고향,<br>짐마(DIMMAH)! 의외로 고소한 맛과<br>모카커피의 느낌이 살짝 남<br>짐마는 에티오피아 5대 커피 재배 지역 중 하나',
+                                        flag : 'strawberry/peach/fruity acidity/prune apriccot/chocolate/rose milk tea',
+                                        op1 : '1,700m',
+                                        op2 : 'djimma',
+                                        op3 : 'natural',
+                                        op4 : '10월-2월',
+                                    },
+                                    {
+                                        img : 'sub0502-4',
+                                        name : '에티오피아 하라 G4 내추럴',
+                                        ename : 'ethiopia harrar g4 natural',
+                                        desc : '"에티오피아의 축복"<br>에티오피아 하라는 높은 명성과 제한된 생산량으로 인해 등급에 비해 가격은 높으나 그 맛과<br>향으로 인하여 전세계에서 사랑받는 프리미엄 커피',
+                                        flag : 'berry-like/cereal/molasses/dark chocolate',
+                                        op1 : '2,100m-2,300m',
+                                        op2 : 'harrar',
+                                        op3 : 'natural',
+                                        op4 : '11월-2월',
+                                    },
+                                    {
+                                        img : 'sub0502-5',
+                                        name : '에티오피아 리무 G2 워시드',
+                                        ename : 'ethiopia limu g2 washed',
+                                        desc : '리무 생두는 중간 크기로 둥근 형태이며 푸른<br>빛을 띄며, 미국과 유럽에서 각광받는 커피로<br>SPICY하며 톡 쏘는 와인 풍미와 달콤함과 균형<br>잡힌 농도로 세계에서 카페인이 가장 적은 커피',
+                                        flag : 'nutty/chocolate/tropical fruit/winy clean',
+                                        op1 : '1,800m-2,100m',
+                                        op2 : 'limu',
+                                        op3 : 'washed',
+                                        op4 : '12월-3월',
+                                    },
+                                    {
+                                        img : 'sub0502-6',
+                                        name : '에티오피아 시다모 G2 워시드',
+                                        ename : 'ethiopia sidamo g2 washed',
+                                        desc : '전반적으로 느낄 수 있는 꽃 및 과일 늬앙스의<br>아루마! 강하면서도 부드럽게 다가오는 산미와<br>입안가득 가볍게 퍼지는 단맛과<br>커피의 깔끔한 뒷맛이 특징',
+                                        flag : 'fruity/tangerine/roasted walnut/syrupy/herb tea',
+                                        op1 : '1,750m-2,200m',
+                                        op2 : 'sidamo',
+                                        op3 : 'washed',
+                                        op4 : '11월-2월',
+                                    },
+                                    {
+                                        img : 'sub0502-3',
+                                        name : '에티오피아 짐마 봉가 G3 내추럴',
+                                        ename : 'ethiopia djimma bonga g3 natural',
+                                        desc : '세계 최초로 커피가 발견된 커피의 고향,<br>짐마(DIMMAH)! 의외로 고소한 맛과<br>모카커피의 느낌이 살짝 남<br>짐마는 에티오피아 5대 커피 재배 지역 중 하나',
+                                        flag : 'strawberry/peach/fruity acidity/prune apriccot/chocolate/rose milk tea',
+                                        op1 : '1,700m',
+                                        op2 : 'djimma',
+                                        op3 : 'natural',
+                                        op4 : '10월-2월',
+                                    },
+                                    {
+                                        img : 'sub0502-4',
+                                        name : '에티오피아 하라 G4 내추럴',
+                                        ename : 'ethiopia harrar g4 natural',
+                                        desc : '"에티오피아의 축복"<br>에티오피아 하라는 높은 명성과 제한된 생산량으로 인해 등급에 비해 가격은 높으나 그 맛과<br>향으로 인하여 전세계에서 사랑받는 프리미엄 커피',
+                                        flag : 'berry-like/cereal/molasses/dark chocolate',
+                                        op1 : '2,100m-2,300m',
+                                        op2 : 'harrar',
+                                        op3 : 'natural',
+                                        op4 : '11월-2월',
+                                    },
+                                    {
+                                        img : 'sub0502-5',
+                                        name : '에티오피아 리무 G2 워시드',
+                                        ename : 'ethiopia limu g2 washed',
+                                        desc : '리무 생두는 중간 크기로 둥근 형태이며 푸른<br>빛을 띄며, 미국과 유럽에서 각광받는 커피로<br>SPICY하며 톡 쏘는 와인 풍미와 달콤함과 균형<br>잡힌 농도로 세계에서 카페인이 가장 적은 커피',
+                                        flag : 'nutty/chocolate/tropical fruit/winy clean',
+                                        op1 : '1,800m-2,100m',
+                                        op2 : 'limu',
+                                        op3 : 'washed',
+                                        op4 : '12월-3월',
+                                    },
+                                    {
+                                        img : 'sub0502-6',
+                                        name : '에티오피아 시다모 G2 워시드',
+                                        ename : 'ethiopia sidamo g2 washed',
+                                        desc : '전반적으로 느낄 수 있는 꽃 및 과일 늬앙스의<br>아루마! 강하면서도 부드럽게 다가오는 산미와<br>입안가득 가볍게 퍼지는 단맛과<br>커피의 깔끔한 뒷맛이 특징',
+                                        flag : 'fruity/tangerine/roasted walnut/syrupy/herb tea',
+                                        op1 : '1,750m-2,200m',
+                                        op2 : 'sidamo',
+                                        op3 : 'washed',
+                                        op4 : '11월-2월',
+                                    },
+                                ]
+                            })
+                        </div>
                     </div>
                 </section>
             </div>

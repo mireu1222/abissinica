@@ -24,7 +24,150 @@
 
             <!-- page contents -->
             <div class="contents">
-                
+                <section>
+                    <div class="about-coffee">
+                        <div class="title">
+                            <div class="text">
+                                <h4>싱글오리진<small>Single Origin</small></h4>
+                                <p>순수함을 추구하는 아비시니카 커피의 마음<br>자연 그대로의 생두를 로스팅 강도와 원산지에<br>따른 차별된 맛의 싱글오리진 원두커피</p>
+                            </div>
+                            <div class="img">
+                                <img src="/images/img/img-sub0101-1.jpg" alt="싱글오리진 원두">
+                            </div>
+                        </div>
+                        <div class="about-contents">
+                            @@include('./modules/coffee-list-edit.html', {
+                                e : 'AFRICA',
+                                k : '아프리카',
+                                desc : '열대과일 향과 꽃 향기가 조화된 천연적인 풍미가 특징',
+                                color : 'green',
+                                img : 'coffee',
+                                lists : [
+                                    {
+                                        name : '에티오피아 디카페인',
+                                        ename : 'ETHIOPIA DECAFFEIN',
+                                        desc : '스위스 워터 프로세스로 가공된<br>에티오피아 디카페인 커피!<br>카페인에 예민한 분들을 위한 커피로 가공과정에서 카페인만을 제거하여 안심하게 즐길 수 있는 커피',
+                                        flag : 'FULL CITY',
+                                        flavor : '과일/오렌지/꽃향',
+                                        lv1 : '3',
+                                        lv2 : '2',
+                                        lv3 : '3',
+                                        lv4 : '1',
+                                        lv5 : '3',
+                                        lv6 : '2',
+                                    },
+                                    {
+                                        name : '에티오피아 시다모',
+                                        ename : 'ETHIOPIA SIDAMO G2',
+                                        desc : '전반적으로 느낄 수 있는<br>꽃 및 과일 뉘앙스의 아로마!<br>강하면서도 부드럽게 다가오는 산미와<br>입안 전체로 가볍게 퍼지는 단맛',
+                                        flag : 'high',
+                                        flavor : 'fruity/tangerine/roasted walnut/berbtea',
+                                        lv1 : '4',
+                                        lv2 : '2',
+                                        lv3 : '2',
+                                        lv4 : '3',
+                                        lv5 : '2',
+                                        lv6 : '3',
+                                    },
+                                    {
+                                        name : '에티오피아 시다모 웨르카',
+                                        ename : 'ethiopia sidamo werka g1 natural',
+                                        desc : '짙은 라벤터 향과 캐모마일 등<br>복합적인 허브의 향미가 풍부하며,<br>또한 품질 좋은 커피에서만<br>느낄 수 있는 깔끔하고 선명한 산미는 자두를 연상',
+                                        flag : 'high',
+                                        flavor : 'lavender/herb/plum/caramel',
+                                        lv1 : '5',
+                                        lv2 : '2',
+                                        lv3 : '2',
+                                        lv4 : '3',
+                                        lv5 : '3',
+                                        lv6 : '4',
+                                    },
+                                    {
+                                        name : '에티오피아 아바야 게이샤',
+                                        ename : 'abaya geisha g1 natural',
+                                        desc : '공들여 길러진 아바야 지역의 예가체프<br>게이샤 예가체프 특유의 사과향과<br>싱그러운 포도향, 꿀처럼<br>달콤한 마무리까지 기분좋은 커피',
+                                        flag : 'medium-high',
+                                        flavor : 'apple/floral/grapefruit/honey/syrupdy',
+                                        lv1 : '5',
+                                        lv2 : '2',
+                                        lv3 : '2',
+                                        lv4 : '3',
+                                        lv5 : '2',
+                                        lv6 : '4',
+                                    },
+                                    {
+                                        name : '에티오피아 예가체프 G2',
+                                        ename : 'ethiopia yirgacheffee g2',
+                                        desc : '야생 커피의 고향, 에티오피아의 푸른 심장<br>깊은 맛과 꽃과 와인에 비유되는<br>은은한 향미를 지녀 커피의 고향이자<br>어머니인 에티오피아 커피',
+                                        flag : 'medium-high',
+                                        flavor : '과일/오렌지/꽃향/아몬드/땅콩',
+                                        lv1 : '4',
+                                        lv2 : '2',
+                                        lv3 : '1',
+                                        lv4 : '3',
+                                        lv5 : '2',
+                                        lv6 : '3',
+                                    },
+                                    {
+                                        name : '에티오피아 코케허니',
+                                        ename : 'ethiopia koke honew g1 natural',
+                                        desc : '입안을 채우는 다채로운 향과 맛<br>꿀처럼 달콤한 맛과 싱그러운<br>산미의 조화를 지닌<br>에티오피아 예가체프 지역의 커피',
+                                        flag : 'high',
+                                        flavor : 'berry/honey/citrus/caramel/tangerine',
+                                        lv1 : '5',
+                                        lv2 : '2',
+                                        lv3 : '2',
+                                        lv4 : '3',
+                                        lv5 : '3',
+                                        lv6 : '3',
+                                    },
+                                    {
+                                        name : '에티오피아 하라',
+                                        ename : 'ethiopia harrar g4 natural',
+                                        desc : '"에티오피아의 축복"하라는 높은 명성과<br>제한된 생산량으로 인해 등급에 비해<br>가격이 높으나 맛과 향으로 인하여<br>전세계에서 사랑받는 프리미엄 커피',
+                                        flag : 'high',
+                                        flavor : 'berry-like/cereal/molasses/darkchocolate',
+                                        lv1 : '4',
+                                        lv2 : '2',
+                                        lv3 : '2',
+                                        lv4 : '3',
+                                        lv5 : '2',
+                                        lv6 : '3',
+                                    },
+                                    {
+                                        name : '케냐 AA',
+                                        ename : 'kenya aa',
+                                        desc : '신맛, 와인맛, 과일맛 삼중주!<br>묵직한 바디감과 오묘한 과일 향,<br>짙은 향기 속에 진한 신맛, 와인 맛, 과일 맛을<br>담으며, 가볍지 않은 깊고 진한 풍미',
+                                        flag : 'high-city',
+                                        flavor : 'apple/floral/grapefruit/honey/syrupdy',
+                                        lv1 : '5',
+                                        lv2 : '2',
+                                        lv3 : '3',
+                                        lv4 : '3',
+                                        lv5 : '3',
+                                        lv6 : '4',
+                                    }
+                                ]
+                            })
+                            @@loop('./modules/coffee-list.html', [
+                                {
+                                    e : 'NORTH AMERICA AND LATIN AMERICA',
+                                    k : '북미 및 중남미',
+                                    desc : '코코넛&middot;너트 향과 고소한 맛이 특징',
+                                    color : 'orange',
+                                    lists : '4'
+                                },
+                                {
+                                    e : 'ASIA',
+                                    k : '아시아',
+                                    desc : '토양과 햇빛의 개성이 강한 커피',
+                                    color : 'brown',
+                                    lists : '12'
+                                }
+                            ])
+                        </div>
+                    </div>
+                </section>
             </div>
             <!-- // page contents -->
         </div>

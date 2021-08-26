@@ -98,6 +98,7 @@
                     font-weight:700;
                     @include skew;
                     transition:background 0.2s linear;
+                    white-space:nowrap;
                     @include pc {
                         &:hover {
                             background:rgba(#000, 0.15);
@@ -166,12 +167,26 @@
         @include contArea;
         margin-top:65px;
         font-size:32px;
-        line-height:1;
+        line-height:1.1;
         font-weight:700;
         text-align:center;
+        word-break:keep-all;
         @include mobile {
             margin-top:40px;
             font-size:26px;
+        }
+    }
+    .sub-page-desc {
+        @include contArea;
+        text-align:center;
+        margin-top:15px;
+        color:#e6c897;
+        font-size:20px;
+        line-height:1.2;
+        word-break:keep-all;
+        @include skew;
+        @include mobile {
+            font-size:16px;
         }
     }
     .contents {
@@ -278,6 +293,9 @@
                     order:1;
                     display:block;
                     width:50%;
+                    &.middle {
+                        align-self:center;
+                    }
                     @include mobile {
                         width:100%;
                         margin-top:10px;

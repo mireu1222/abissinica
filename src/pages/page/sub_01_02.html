@@ -24,7 +24,134 @@
 
             <!-- page contents -->
             <div class="contents">
-                
+                <section>
+                    <div class="about-coffee">
+                        <div class="title">
+                            <div class="text">
+                                <h4>블렌드 커피<small>Blend coffee</small></h4>
+                                <p>아비시니카 커피의 특별한 선물<br>커피 본연의 맛과 향을 균형감 있게<br>이끌어낸 블랜딩 커피</p>
+                            </div>
+                            <div class="img">
+                                <img src="/images/img/img-sub0102-1.jpg" alt="프리미엄블렌드 원두">
+                            </div>
+                        </div>
+                        <div class="about-contents">
+                            @@include('./modules/coffee-list-edit.html', {
+                                e : 'PREMIUM BLEND COFFEE',
+                                k : '프리미엄 블렌드',
+                                desc : '커피 본연의 풍미를 더 끌어올린 블렌딩 원두커피',
+                                color : 'green',
+                                img : 'coffee2-',
+                                lists : [
+                                    {
+                                        name : '아비시니카 에스프레소',
+                                        ename : 'abbisinica espresso',
+                                        desc : '날카롭지만 부드럽고<br>강한 듯 하지만 연한 느낌의<br>고소하고 감칠맛 나는 커피',
+                                        flag : 'high',
+                                        flavor : '브라질/콜롬비아/에티오피아',
+                                        lv1 : '4',
+                                        lv2 : '3',
+                                        lv3 : '2',
+                                        lv4 : '3',
+                                        lv5 : '3',
+                                        lv6 : '4',
+                                    },
+                                    {
+                                        name : '오마이카페 스탠다드',
+                                        ename : 'oh my cafe standard',
+                                        desc : 'DAILY COFFEE BLEND...<br>매일 마시게 되는 커피로<br>에스프레소 블렌드 중에 내추럴한<br>아로마와 풍부한 감칠맛이 좋은 커피',
+                                        flag : 'city',
+                                        flavor : '콜롬비아/에티오피아',
+                                        lv1 : '4',
+                                        lv2 : '3',
+                                        lv3 : '2',
+                                        lv4 : '2',
+                                        lv5 : '3',
+                                        lv6 : '4',
+                                    },
+                                    {
+                                        name : '오마이카페 프리미엄',
+                                        ename : 'oh my cafe premium',
+                                        desc : '날카롭지만 부드럽고<br>강한 듯 하지만 연한 느낌의<br>고소하고 감칠맛 나는 커피!',
+                                        flag : 'city',
+                                        flavor : '브라질/콜롬비아/에티오피아',
+                                        lv1 : '4',
+                                        lv2 : '3',
+                                        lv3 : '2',
+                                        lv4 : '3',
+                                        lv5 : '3',
+                                        lv6 : '4',
+                                    },
+                                    {
+                                        name : '오마이카페 시그니처',
+                                        ename : 'oh my cafe signature',
+                                        desc : '솔로몬 왕과 시바여왕의 만남이랄까?<br>귀족의 여유로움과<br>긴장감이 어우러지는 풍미',
+                                        flag : 'city',
+                                        flavor : '브라질/콜롬비아/에티오피아/케냐',
+                                        lv1 : '4',
+                                        lv2 : '3',
+                                        lv3 : '2',
+                                        lv4 : '3',
+                                        lv5 : '3',
+                                        lv6 : '4',
+                                    },
+                                    {
+                                        name : '와일드 플라워',
+                                        ename : 'wild flower',
+                                        desc : '워시드 커피와 내추럴 커피의 블렌딩 커피<br>에티오피아 특유의 산미와 열대과일향,<br>꽃향이 싱그러운 블렌딩 커피의 결정판',
+                                        flag : 'high',
+                                        flavor : '에티오피아',
+                                        lv1 : '4',
+                                        lv2 : '2',
+                                        lv3 : '1',
+                                        lv4 : '3',
+                                        lv5 : '2',
+                                        lv6 : '3',
+                                    },
+                                    {
+                                        name : '제이콥스 스테이션',
+                                        ename : 'jacob&apos;s station',
+                                        desc : '커피의 깔끔하고 풍부한 느낌이<br>강하지 않은 블렌딩 커피로 마신 후<br>기억되는 커피의 좋은 향이<br>은은하게 남아 즐겁게 하는 커피',
+                                        flag : 'high',
+                                        flavor : '브라질/콜롬비아/에티오피아/케냐',
+                                        lv1 : '5',
+                                        lv2 : '2',
+                                        lv3 : '2',
+                                        lv4 : '3',
+                                        lv5 : '3',
+                                        lv6 : '3',
+                                    },
+                                    {
+                                        name : '카페 에르마노스',
+                                        ename : 'cafe hermanos',
+                                        desc : '스페인 언어로 「형세」라는 뜻_"에르마노스"<br>에티오피아의 콜롬비아는 한국전쟁 참전국<br>에티오피아 과일의 단맛과<br>수프리모의 고소함이 특징',
+                                        flag : 'high',
+                                        flavor : '에티오피아/콜롬비아',
+                                        lv1 : '4',
+                                        lv2 : '2',
+                                        lv3 : '2',
+                                        lv4 : '3',
+                                        lv5 : '2',
+                                        lv6 : '3',
+                                    },
+                                    {
+                                        name : '화인아라비카',
+                                        ename : 'fine arabica',
+                                        desc : '내추럴한 아로마와 풍부한 감칠맛이 좋고,<br>강렬하지만 쓰지 않는 고소하고<br>부드러운 카카오같은 쓴 단맛이 특징',
+                                        flag : 'high',
+                                        flavor : '브라질/콜롬비아',
+                                        lv1 : '5',
+                                        lv2 : '2',
+                                        lv3 : '3',
+                                        lv4 : '3',
+                                        lv5 : '3',
+                                        lv6 : '4',
+                                    },
+                                ]
+                            })
+                        </div>
+                    </div>
+                </section>
             </div>
             <!-- // page contents -->
         </div>

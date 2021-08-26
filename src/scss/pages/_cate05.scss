@@ -1,97 +1,177 @@
 /* 사업자 구매 */
 .container.cate05 {
-    // 구매 안내
-    .buisnessman-cont {
-        .hello {
+    .sub05 {
+        .head {
             display:flex;
-            align-items:center;
-            padding:0 70px;
-            @include calcs(padding-top, 120px, 1280px);
-            @include calcs(padding-bottom, 120px, 1280px);
-            background-image:url('/images/img/img-sub0501.jpg');
-            background-size:cover;
-            background-repeat:no-repeat;
-            background-position:center;
+            background:#e4b389;
             @include tablet {
-                padding-left:30px;
-                padding-right:30px;
+                align-items:flex-start;
             }
             @include mobile {
-                padding:0;
-                @include calcs(padding-top, 546px, 1280px);
-                background-size:100% auto;
-                background-position:center 0;
+                display:block;
             }
-            .text {
-                @include calcs(width, 450px, 1280px);
-                margin-left:auto;
-                padding:20px 0;
-                color:$white;
+            .thumb {
+                display:block;
+                @include calcs(width, 525px, 1280px);
+                @include calcs(min-width, 525px, 1280px);
+                box-shadow: 3px 4px 5px 0px rgba(0, 0, 0, 0.47);
                 @include mobile {
                     width:100%;
-                    margin-top:20px;
-                    padding:0;
-                    color:$basic;
+                    min-width:100%;
+                }
+            }
+            .text {
+                flex:1;
+                @include calcs(padding-left, 70px, 1280px);
+                @include calcs(padding-top, 60px, 1280px);
+                @include calcs(padding-bottom, 60px, 1280px);
+                @include calcs(padding-right, 100px, 1280px);
+                color:#fff;
+                @include tablet {
+                    padding:20px 30px;
+                }
+                @include mobile {
+                    padding:20px 12px;
                 }
                 .tit {
-                    font-size:28px;
-                    line-height:34px;
-                    font-weight:700;
+                    font-size:32px;
+                    line-height:40px;
+                    font-weight:900;
                     word-break:keep-all;
+                    @include tablet {
+                        font-size:28px;
+                        line-height:36px;
+                    }
                     @include mobile {
-                        font-size:20px;
-                        line-height:24px;
+                        font-size:24px;
+                        line-height:32px;
                     }
                 }
                 .desc {
-                    position:relative;
-                    margin-top:20px;
-                    padding-top:21px;
-                    @include font;
-                    color:rgba($white, 0.7);
+                    margin-top:25px;
+                    font-size:20px;
+                    line-height:40px;
+                    font-weight:700;
                     word-break:keep-all;
-                    &::before {
-                        content:' ';
-                        position:absolute;
-                        top:0;
-                        left:0;
-                        width:70px;
-                        height:1px;
-                        background:rgba($white, 0.7);
+                    @include tablet {
+                        margin-top:20px;
+                        font-size:18px;
+                        line-height:28px;
                     }
                     @include mobile {
-                        color:$basic;
-                        &::before {
-                            background:rgba($basic, 0.7);
-                        }
+                        font-size:16px;
+                        line-height:24px;
+                        @include skew;
                     }
                 }
             }
         }
-        .infos {
-            margin-top:50px;
-            @include mobile {
-                margin-top:30px;
+        .body {
+            padding:70px 40px 60px;
+            border:3px solid $border;
+            border-top:none;
+            @include tablet {
+                padding:50px 20px;
             }
-            dl {
-                display:flex;
-                border-bottom:1px solid $border;
-                &:first-child {
-                    border-top:1px solid $border;
-                }
-                dt {
-                    width:120px;
-                    padding:6px 15px;
-                    background:$blur;
-                    @include font;
-                    text-align:center;
-                }
-                dd {
-                    width:calc(100% - 120px);
-                    padding:6px 15px;
-                    color:$cont;
-                    @include font;
+            @include mobile {
+                padding:30px 12px;
+            }
+            .bullet-list {
+                max-width:950px;
+                margin:0 auto;
+                text-align:left;
+                li {
+                    color:#666;
+                    font-size:20px;
+                    line-height:27px;
+                    letter-spacing:-0.5px;
                     word-break:keep-all;
+                    @include mobile {
+                        font-size:18px;
+                        line-height:25px;
+                    }
+                    @include mobile {
+                        font-size:16px;
+                        line-height:24px;
+                    }
+                }
+            }
+            > p {
+                position:relative;
+                margin-top:70px;
+                padding-top:45px;
+                color:#666;
+                @include font-md;
+                word-break:keep-all;
+                text-align:center;
+                @include mobile {
+                    margin-top:40px;
+                    padding-top:25px;
+                }
+                &::before {
+                    content:' ';
+                    position:absolute;
+                    top:0;
+                    left:50%;
+                    width:265px;
+                    height:1px;
+                    margin-left:-132px;
+                    background:#666;
+                    @include mobile {
+                        width:160px;
+                        margin-left:-80px;
+                    }
+                }
+            }
+            &.type2 {
+                padding:70px 0 60px;
+                @include tablet {
+                    padding:50px 0;
+                }
+                @include mobile {
+                    padding:30px 0;
+                }
+                .flex {
+                    display:flex;
+                    @include mobile {
+                        display:block;
+                    }
+                    .box {
+                        padding:0 50px;
+                        border-left:1px solid $border;
+                        @include tablet {
+                            padding:0 30px;
+                        }
+                        @include mobile {
+                            margin-top:20px;
+                            padding:0 12px;
+                        }
+                        &:first-child {
+                            margin-top:0;
+                            border-left:none;
+                        }
+                        .tit {
+                            margin-bottom:20px;
+                            padding-left:40px;
+                            background:url('/images/icon/icon-title2.gif') 0 0 no-repeat;
+                            color:#666;
+                            font-size:20px;
+                            line-height:22px;
+                            font-weight:700;
+                            word-break:keep-all;
+                            @include mobile {
+                                margin-bottom:10px;
+                                padding-left:30px;
+                                font-size:18px;
+                            }
+                        }
+                        .bullet-list {
+                            padding-left:40px;
+                            @include mobile {
+                                padding-left:30px;
+                            }
+                        }
+                    }
                 }
             }
         }

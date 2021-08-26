@@ -44,13 +44,14 @@
         }
         @@if(context.cate05){
         <ul class="tabs">
-            <li@@if(context.sub0501){ class="active"}><a href="/page/sub_05_01.html">사업자구매안내</a></li>
-            <li@@if(context.sub0502){ class="active"}><a href="/page/sub_05_02.html">사업자회원신청</a></li>
+            <li@@if(context.sub0501){ class="active"}><a href="/page/sub_05_01.html">원두</a></li>
+            <li@@if(context.sub0502){ class="active"}><a href="/page/sub_05_02.html">생두</a></li>
         </ul>
         }
         @@if(context.cate06){
         <ul class="tabs">
             <li@@if(context.sub0601){ class="active"}><a href="/page/sub_06_01.html">회사개요</a></li>
+            <li@@if(context.sub0608){ class="active"}><a href="/page/sub_06_08.html">사업내용</a></li>
             <li@@if(context.sub0602){ class="active"}><a href="/page/sub_06_02.html">인사말</a></li>
             <li@@if(context.sub0603){ class="active"}><a href="/page/sub_06_03.html">경영이념</a></li>
             <li@@if(context.sub0604){ class="active"}><a href="/page/sub_06_04.html">회사연혁</a></li>
@@ -87,8 +88,15 @@
     </ol>
 </nav>
 <!-- // breadcrumb -->
-@@if(!context.noTitle){
-<!-- page title -->
-<h3 class="sub-page-title@@if(context.cate02){ type2}">@@title</h3>
-<!-- // page title -->
+@@if(!context.noTitle && !context.cate01){
+    <!-- page title -->
+    <h3 class="sub-page-title@@if(context.cate02){ type2}">@@title</h3>
+    <!-- // page title -->
+}
+@@if(context.cate01){
+    <!-- page title -->
+    <h3 class="sub-page-title">아비시니카 프리미엄 브랜드 및 싱글 브랜드 소개</h3>
+    <p class="sub-page-desc">에티오피아를 후원하는 한잔의 커피는 아프리카와 동행하는 착한소비입니다.</p>
+    <p class="sub-page-desc">좋은 생각 &middot; 좋은 커피</p>
+    <!-- // page title -->
 }

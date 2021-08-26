@@ -1,0 +1,48 @@
+<section>
+    <div class="list-title">
+        <span class="eyebrow" aria-hidden="true">@@e</span>
+        <h5>@@k</h5>
+        <p class="desc">@@desc</p>
+    </div>
+    <div class="list-wraps type2">
+        <ul class="lists">
+            @@for(var i=0; i < lists.length; i++){
+                <li>
+                    <a href="https://smartstore.naver.com/ohmycafe" class="inner" target="_blank">
+                        <span class="img"><img src="/images/img/img-`+lists[i].img+`.jpg" alt=""></span>
+                        <p class="name">`+lists[i].name+`</p>
+                        <p class="e-name">`+lists[i].ename+`</p>
+                        <p class="desc">`+lists[i].desc+`</p>
+                        <span class="flag @@color">`+lists[i].flag+`</span>
+                        <div class="tbl-layout">
+                            <dl>
+                                <dt>원산지</dt>
+                                <dd>ethiopia</dd>
+                            </dl>
+                            <dl>
+                                <dt>재배고도</dt>
+                                <dd>`+lists[i].op1+`</dd>
+                            </dl>
+                            <dl>
+                                <dt>생산지역</dt>
+                                <dd>`+lists[i].op2+`</dd>
+                            </dl>
+                            <dl>
+                                <dt>품종</dt>
+                                <dd>heirloom</dd>
+                            </dl>
+                            <dl>
+                                <dt>가공방식</dt>
+                                <dd>`+lists[i].op3+`</dd>
+                            </dl>
+                            <dl>
+                                <dt>수확시기</dt>
+                                <dd>`+lists[i].op4+`</dd>
+                            </dl>
+                        </div>
+                    </a>
+                </li>
+            }
+        </ul>
+    </div>
+</section>

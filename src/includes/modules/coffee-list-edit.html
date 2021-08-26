@@ -1,0 +1,49 @@
+<section>
+    <div class="list-title">
+        <span class="eyebrow" aria-hidden="true">@@e</span>
+        <h5>@@k</h5>
+        <p class="desc">@@desc</p>
+    </div>
+    <div class="list-wraps">
+        <ul class="lists">
+            @@for(var i=0; i < lists.length; i++){
+                <li>
+                    <a href="https://smartstore.naver.com/ohmycafe" class="inner" target="_blank">
+                        <span class="img"><img src="/images/img/img-@@img`+[i+1]+`.jpg" alt=""></span>
+                        <p class="name">`+lists[i].name+`</p>
+                        <p class="e-name">`+lists[i].ename+`</p>
+                        <p class="desc">`+lists[i].desc+`</p>
+                        <span class="flag @@color">`+lists[i].flag+`</span>
+                        <p class="flavor">`+lists[i].flavor+`</p>
+                        <ul class="flavor-list">
+                            <li>
+                                <p class="tit">AROMA(풍미)</p>
+                                <div class="level lv`+lists[i].lv1+`"><span class="on">`+lists[i].lv1+` / 5</span></div>
+                            </li>
+                            <li>
+                                <p class="tit">SWEET(단맛)</p>
+                                <div class="level lv`+lists[i].lv2+`"><span class="on">`+lists[i].lv2+` / 5</span></div>
+                            </li>
+                            <li>
+                                <p class="tit">BITTER(쓴맛)</p>
+                                <div class="level lv`+lists[i].lv3+`"><span class="on">`+lists[i].lv3+` / 5</span></div>
+                            </li>
+                            <li>
+                                <p class="tit">ACIDITY(신맛)</p>
+                                <div class="level lv`+lists[i].lv4+`"><span class="on">`+lists[i].lv4+` / 5</span></div>
+                            </li>
+                            <li>
+                                <p class="tit">BODY(입안질감)</p>
+                                <div class="level lv`+lists[i].lv5+`"><span class="on">`+lists[i].lv5+` / 5</span></div>
+                            </li>
+                            <li>
+                                <p class="tit">BALANCE(균형감)</p>
+                                <div class="level lv`+lists[i].lv6+`"><span class="on">`+lists[i].lv6+` / 5</span></div>
+                            </li>
+                        </ul>
+                    </a>
+                </li>
+            }
+        </ul>
+    </div>
+</section>

@@ -1,0 +1,320 @@
+/* COFFEE */
+.about-coffee {
+    .title {
+        display:flex;
+        align-items:center;
+        padding:55px 60px;
+        background:#ebebeb;
+        @include tablet {
+            padding:30px 20px;
+        }
+        @include mobile {
+            display:block;
+            padding:20px 12px;
+        }
+        .text {
+            flex:1;
+            h4 {
+                font-size:50px;
+                font-weight:700;
+                color:#aeb675;
+                @include tablet {
+                    font-size:40px;
+                }
+                @include mobile {
+                    font-size:30px;
+                }
+                small {
+                    display:block;
+                    margin-top:15px;
+                    color:#c4c4c4;
+                    font-size:30px;
+                    @include tablet {
+                        font-size:28px;
+                    }
+                    @include mobile {
+                        margin-top:5px;
+                        font-size:20px;
+                    }
+                }
+            }
+            p {
+                margin-top:20px;
+                color:#fff;
+                @include font-title;
+                word-break:keep-all;
+            }
+        }
+        .img {
+            @include calcs(width, 500px, 1280px);
+            @include calcs(min-width, 500px, 1280px);
+            @include mobile {
+                width:100%;
+                margin-top:15px;
+            }
+        }
+    }
+    .about-contents {
+        margin-top:100px;
+        @include mobile {
+            margin-top:50px;
+        }
+        section {
+            margin-top:80px;
+            @include mobile {
+                margin-top:40px;
+            }
+            &:first-child {
+                margin-top:0;
+            }
+        }
+        .list-title {
+            position:relative;
+            display:flex;
+            flex-wrap:wrap;
+            margin-bottom:50px;
+            padding-bottom:30px;
+            @include mobile {
+                margin-bottom:20px;
+                padding-bottom:10px;
+            }
+            &::after {
+                content:' ';
+                position:absolute;
+                left:0;
+                bottom:0;
+                width:calc(50% + 90px);
+                height:1px;
+                background:$border;
+                @include mobile {
+                    width:100%;
+                }
+            }
+            .eyebrow {
+                display:block;
+                width:100%;
+                color:rgba($cont, .4);
+                font-size:30px;
+                line-height:1;
+                font-weight:100;
+                letter-spacing:-1px;
+                @include mobile {
+                    font-size:20px;
+                }
+            }
+            h5 {
+                margin-right:20px;
+                color:#f56505;
+                font-size:40px;
+                line-height:1.2;
+                font-weight:900;
+                @include mobile {
+                    font-size:28px;
+                }
+            }
+            .desc {
+                align-self:flex-end;
+                color:rgba($cont, .4);
+                @include font-title;
+                font-weight:100;
+                word-break:keep-all;
+                @include mobile {
+                    margin-top:10px;
+                }
+            }
+        }
+        .list-wraps {
+            overflow:hidden;
+            ul.lists {
+                display:flex;
+                flex-wrap:wrap;
+                margin:-40px 0 0 -10px;
+                @include mobile {
+                    margin:0;
+                }
+                > li {
+                    width:25%;
+                    margin-top:40px;
+                    padding-left:10px;
+                    @include tablet {
+                        width:50%;
+                    }
+                    @include mobile {
+                        width:100%;
+                        padding-left:0;
+                        margin-top:20px;
+                        &:first-child {
+                            margin-top:0;
+                        }
+                    }
+                }
+            }
+            .inner {
+                display:flex;
+                flex-direction:column;
+                height:100%;
+                padding:20px 4px 40px;
+                border:1px solid #aaa;
+                text-align:center;
+                .img {
+                    display:block;
+                }
+                .name {
+                    @include font-title;
+                }
+                .e-name {
+                    margin-top:3px;
+                    color:#d49e29;
+                    text-transform:uppercase;
+                    @include font-md;
+                }
+                .desc {
+                    margin-top:8px;
+                    margin-bottom:15px;
+                    color:#666;
+                    font-size:15px;
+                    line-height:22px;
+                    letter-spacing:-1px;
+                    word-break:keep-all;
+                    @include skew;
+                }
+                .flag {
+                    display:block;
+                    width:140px;
+                    height:30px;
+                    margin:auto auto 15px;
+                    border-radius:15px;
+                    line-height:28px;
+                    font-weight:700;
+                    color:#fff;
+                    text-transform:uppercase;
+                    &.green {
+                        background:#4f703e;
+                    }
+                    &.orange {
+                        background:#f58220;
+                    }
+                    &.brown {
+                        background:#b16c31;
+                    }
+                }
+                .flavor {
+                    margin-bottom:15px;
+                    font-size:13px;
+                    line-height:18px;
+                    word-break:keep-all;
+                    text-transform:uppercase;
+                    letter-spacing:-0.2px;
+                    @include skew;
+                    @include mobile {
+                        font-size:12px;
+                        line-height:16px;
+                    }
+                }
+                .flavor-list {
+                    width:100%;
+                    max-width:280px;
+                    margin:0 auto;
+                    li {
+                        display:flex;
+                        align-items:center;
+                        margin-top:10px;
+                        &:first-child {
+                            margin-top:0;
+                        }
+                        .tit {
+                            margin-right:auto;
+                            font-size:14px;
+                            white-space:nowrap;
+                            @include skew;
+                            @include mobile {
+                                font-size:13px;
+                            }
+                        }
+                        .level {
+                            position:relative;
+                            width:160px;
+                            height:14px;
+                            margin-left:auto;
+                            background:url('/images/bg/bg-lv.gif') 0 0 no-repeat;
+                            font-size:0;
+                            overflow:hidden;
+                            span.on {
+                                position:absolute;
+                                top:0;
+                                left:0;
+                                height:14px;
+                                background:url('/images/bg/bg-lv-on.gif') 0 0 no-repeat;
+                            }
+                            &.lv1 span.on {
+                                width:28px;
+                            }
+                            &.lv2 span.on {
+                                width:28px * 2 + 5px;
+                            }
+                            &.lv3 span.on {
+                                width:28px * 3 + 10px;
+                            }
+                            &.lv4 span.on {
+                                width:28px * 4 + 15px;
+                            }
+                            &.lv5 span.on {
+                                width:28px * 5 + 20px;
+                            }
+                        }
+                    }
+                }
+            }
+            &.type2 {
+                .inner {
+                    padding-bottom:10px;
+                    .name {
+                        margin-top:15px;
+                        font-size:22px;
+                        line-height:1.2;
+                        word-break:keep-all;
+                    }
+                    .flag {
+                        width:100%;
+                        height:auto;
+                        padding:4px;
+                        font-size:13px;
+                        line-height:22px;
+                    }
+                    .tbl-layout {
+                        display:flex;
+                        flex-wrap:wrap;
+                        dl {
+                            width:40%;
+                            font-size:15px;
+                            @include skew;
+                            dt {
+                                height:30px;
+                                padding:0 7px;
+                                background:#bcbdc0;
+                                color:#fff;
+                                line-height:30px;
+                                font-weight:700;
+                            }
+                            dd {
+                                padding:7px;
+                                color:#666;
+                                line-height:22px;
+                                text-transform:uppercase;
+                                white-space:nowrap;
+                            }
+                            &:nth-child(3n + 1) {
+                                width:30%;
+                                text-align:left;
+                            }
+                            &:nth-child(3n) {
+                                width:30%;
+                                text-align:right;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

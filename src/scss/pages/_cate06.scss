@@ -599,30 +599,391 @@
     }
 
     // 대외사업
-    .img-layout {
-        position:relative;
-        @include contArea;
-        .img1 {
-            display:block;
-            position:relative;
-            z-index:5;
-            @include calcs(width, 732px, 1280px);
-            box-shadow:3px 4px 32px 0px rgba(144, 144, 144, 0.75);
+    .sub0606 {
+        h4.h4-title {
+            margin-bottom:70px;
+            font-size:28px;
+            line-height:38px;
+            letter-spacing:-0.5px;
+            text-align:center;
+            font-weight:100;
+            word-break:keep-all;
             @include mobile {
-                width:90%;
+                margin-bottom:40px;
+                font-size:18px;
+                line-height:28px;
+                font-weight:400;
             }
         }
-        .img2 {
-            display:block;
-            position:relative;
-            z-index:3;
-            @include calcs(width, 638px, 1280px);
-            @include calcs(margin-top, -230px, 1280px);
-            margin-left:auto;
-            box-shadow:3px 4px 32px 0px rgba(144, 144, 144, 0.75);
+        h5.h5-title {
+            color:#616c45;
+            font-size:24px;
+            font-weight:700;
             @include mobile {
-                width:75%;
-                margin-top:-5%;
+                font-size:18px;
+            }
+            &::before {
+                content:' ';
+                display:inline-block;
+                vertical-align:top;
+                width:21px;
+                height:24px;
+                margin-right:16px;
+                background:url('/images/icon/icon-title.gif') center no-repeat;
+                @include mobile {
+                    height:18px;
+                    margin-right:6px;
+                    background-size:auto 100%;
+                }
+            }
+        }
+        .work-list {
+            display:flex;
+            @include tablet {
+                display:block;
+            }
+            li {
+                display:flex;
+                flex-direction:column;
+                flex:1;
+                margin-left:18px;
+                text-align:center;
+                @include tablet {
+                    margin-left:0;
+                    margin-top:50px;
+                }
+                @include mobile {
+                    margin-top:30px;
+                }
+                &:first-child {
+                    margin-top:0;
+                    margin-left:0;
+                }
+                .h5-title {
+                    margin-bottom:15px;
+                    @include mobile {
+                        margin-bottom:5px;
+                    }
+                }
+                .cont {
+                    margin-top:20px;
+                    display:flex;
+                    flex-direction:column;
+                    height:100%;
+                    padding:25px 20px 50px;
+                    background:$disabled;
+                    @include tablet {
+                        margin-top:10px;
+                        padding:20px 12px 30px;
+                    }
+                    p {
+                        margin-bottom:30px;
+                        color:$cont;
+                        @include font;
+                        word-break:keep-all;
+                        @include tablet {
+                            margin-bottom:20px;
+                        }
+                    }
+                    img {
+                        display:inline-block;
+                        vertical-align:top;
+                        margin-top:auto;
+                        box-shadow: 3px 4px 5px 0px rgba(0, 0, 0, 0.2);
+                    }
+                }
+            }
+        }
+        .with {
+            @include clearfix;
+            .h5-title {
+                float:left;
+                @include tablet {
+                    float:none;
+                }
+            }
+            .ci-list {
+                @include calcs(margin-left, 310px, 1280px);
+                @include tablet {
+                    margin-top:20px;
+                    margin-left:0;
+                }
+                li {
+                    display:flex;
+                    align-items:center;
+                    justify-content:space-between;
+                    margin-top:20px;
+                    @include mobile {
+                        margin-top:10px;
+                        img {
+                            height:33px;
+                        }
+                    }
+                    &:first-child {
+                        margin-top:0;
+                    }
+                }
+            }
+        }
+    }
+
+    // 사업내용
+    .sub0608 {
+        h5.h5-title {
+            color:#616c45;
+            font-size:24px;
+            font-weight:700;
+            @include mobile {
+                font-size:18px;
+            }
+            &::before {
+                content:' ';
+                display:inline-block;
+                vertical-align:top;
+                width:21px;
+                height:24px;
+                margin-right:16px;
+                background:url('/images/icon/icon-title.gif') center no-repeat;
+                @include mobile {
+                    height:18px;
+                    margin-right:6px;
+                    background-size:auto 100%;
+                }
+            }
+        }
+        .img {
+            display:block;
+            text-align:center;
+            &.mb {
+                margin-bottom:40px;
+                @include tablet {
+                    margin-bottom:30px;
+                }
+                @include mobile {
+                    margin-bottom:15px;
+                }
+            }
+            &.mt {
+                margin-top:60px;
+                @include tablet {
+                    margin-top:40px;
+                }
+                @include mobile {
+                    margin-top:20px;
+                }
+            }
+        }
+        .txt {
+            max-width:670px;
+            margin:0 auto;
+            @include font;
+            text-align:center;
+            color:#999;
+            word-break:keep-all;
+        }
+        ul.cont-list {
+            display:flex;
+            margin:25px 0;
+            @include tablet {
+                flex-wrap:wrap;
+                justify-content:center;
+            }
+            @include mobile {
+                display:block;
+                margin:15px 0;
+            }
+            li {
+                position:relative;
+                width:calc((100% - 80px) / 4);
+                margin-left:20px;
+                padding:27px 6px 50px;
+                border:1px solid $border;
+                @include tablet {
+                    width:calc((100% - 40px) / 3);
+                    &:nth-child(3) ~ li {
+                        margin-top:20px;
+                    }
+                }
+                @include mobile {
+                    width:100%;
+                    margin-top:10px;
+                    margin-left:0;
+                    padding:15px 6px 20px;
+                    &:nth-child(3) ~ li {
+                        margin-top:10px;
+                    }
+                }
+                &:first-child {
+                    margin-top:0;
+                    margin-left:0;
+                }
+                &::before {
+                    content:' ';
+                    position:absolute;
+                    top:0;
+                    left:0;
+                    width:100%;
+                    height:56px;
+                    background:$disabled;
+                    z-index:-1;
+                    @include mobile {
+                        height:32px;
+                    }
+                }
+                span {
+                    display:block;
+                    width:59px;
+                    height:59px;
+                    margin:0 auto 20px;
+                    border-radius:50%;
+                    background:#e8bb4d;
+                    color:#fff;
+                    font-size:24px;
+                    line-height:59px;
+                    font-weight:700;
+                    text-align:center;
+                    @include mobile {
+                        width:35px;
+                        height:35px;
+                        margin-bottom:10px;
+                        font-size:17px;
+                        line-height:36px;
+                    }
+                }
+                p {
+                    color:#666;
+                    @include font-lg;
+                    text-align:center;
+                    word-break:keep-all;
+                }
+            }
+        }
+        .sect-area {
+            margin-top:50px;
+            @include mobile {
+                margin-top:30px;
+            }
+            &:first-child {
+                margin-top:0;
+            }
+            h5.h5-title {
+                text-align:center;
+            }
+            p.desc {
+                max-width:900px;
+                margin:20px auto 30px;
+                color:$cont;
+                @include font-md;
+                text-align:center;
+                word-break:keep-all;
+                @include mobile {
+                    margin:10px auto 20px;
+                }
+            }
+        }
+        .img-bg-cont {
+            padding:20px 0;
+            background:url('/images/bg/bg-sub0608-1.jpg') center no-repeat;
+            background-size:cover;
+            .txt-box {
+                display:flex;
+                @include mobile {
+                    display:block;
+                }
+                .box {
+                    flex:1;
+                    border-left:1px solid #ccc;
+                    @include calcs(padding-left, 45px, 1280px);
+                    @include calcs(padding-right, 45px, 1280px);
+                    @include mobile {
+                        margin-bottom:20px;
+                        padding-bottom:20px;
+                        border-bottom:1px solid #ccc;
+                        border-left:none;
+                    }
+                    &:first-child {
+                        border-left:none;
+                    }
+                    .tit {
+                        color:#666;
+                        font-size:20px;
+                        font-weight:700;
+                        word-break:keep-all;
+                        @include mobile {
+                            font-size:18px;
+                        }
+                    }
+                    ul {
+                        margin-top:20px;
+                        @include mobile {
+                            margin-top:10px;
+                        }
+                        li {
+                            color:#666;
+                            @include font-md;
+                            word-break:keep-all;
+                        }
+                    }
+                }
+            }
+            .bottom-txt {
+                margin-top:40px;
+                color:#666;
+                @include font-md;
+                text-align:center;
+                word-break:keep-all;
+                @include mobile {
+                    margin-top:20px;
+                }
+            }
+        }
+        .program-cont {
+            display:flex;
+            @include mobile {
+                display:block;
+            }
+            .dl-box {
+                width:60%;
+                max-width:635px;
+                border-top:1px solid $border;
+                @include mobile {
+                    width:100%;
+                    max-width:none;
+                }
+                dl {
+                    display:table;
+                    width:100%;
+                    border-bottom:1px solid $border;
+                    @include font;
+                    word-break:keep-all;
+                    dt {
+                        display:table-cell;
+                        width:120px;
+                        min-width:120px;
+                        padding:6px 10px;
+                        background:$disabled;
+                        text-align:center;
+                        vertical-align:middle;
+                    }
+                    dd {
+                        display:table-cell;
+                        padding:6px 10px;
+                        color:#666;
+                    }
+                }
+            }
+            .img-box {
+                flex:1;
+                display:flex;
+                align-self:flex-end;
+                justify-content:flex-end;
+                padding:0 20px;
+                @include tablet {
+                    padding-right:0;
+                }
+                @include mobile {
+                    padding:0;
+                }
             }
         }
     }
