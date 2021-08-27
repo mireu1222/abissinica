@@ -19,47 +19,60 @@
             @@include('./layout/page-title.html', {
                 cate04 : true,
                 sub0401 : true,
-                title : '제이콥스만 소개'
+                title : '제이콥스스테이션 소개'
             })
 
             <!-- page contents -->
-            <div class="contents">
-                <section class="full">
-                    <div class="cafe-intro type2">
-                        <div class="intro-hello">
-                            <p class="text ft-mj">A cafe where the story of the staying space becomes special.</p>
-                            <p class="tit"><span>머무르는 공간의 이야기가 특별해지는 카페</span></p>
-                        </div>
-                        <div class="intro-title">
-                            <h4>제이콥스만은 멋과 맛이 공존하는 카페입니다.</h4>
-                            <p class="desc">고급스러운 인테리어와 최고급 원두인 아비시니카를 전문으로 취급하고 있습니다.</p>
-                        </div>
-                        <div class="bg-wrap">
-                            <div class="visual-wrap">
-                                <p class="tit">
-                                    JACOB'S STATION
-                                    <small>머무르는 공간의 이야기가 풍부할수록 기억은 더 특별해집니다.</small>
+            <div class="contents sub0401">
+                <section>
+                    <p class="tit">A cafe where the story of the staying space becomes special</p>
+                    <p class="desc">머무르는 공간의 이야기가 특별해지는 카페</p>
+                    <div class="img-box">
+                        <img src="/images/img/img-sub0401-1.jpg" alt="">
+                    </div>
+                </section>
+                <section>
+                    <div class="introduce">
+                        <div class="box">
+                            <div class="text">
+                                <h4 class="type2">제이콥스 스테이션</h4>
+                                <p>
+                                    2006년 구봉산자락에서 시작된 작은 커피숍은 춘천시민들의 쉼터와 추억의 한 페이지를 만들어주는 공간이었습니다.<br><br>
+
+                                    에티오피아 한국전쟁에 참전한 참전용사를 후원하는 취지로 시작되어 어느덧 16년의 시간이 흘렀습니다.
                                 </p>
-                                <div class="swiper-container">
-                                    <div class="swiper-wrapper">
-                                        <div class="swiper-slide">
-                                            <img src="/images/img/img-sub0302-visual01.jpg" alt="">
-                                        </div>
-                                        <div class="swiper-slide">
-                                            <img src="/images/img/img-sub0302-visual02.jpg" alt="">
-                                        </div>
-                                        <div class="swiper-slide">
-                                            <img src="/images/img/img-sub0302-visual03.jpg" alt="">
-                                        </div>
-                                    </div>
-                                    <div class="swiper-control">
-                                        <div class="control-btn prev"><span class="blind">PREV</span></div>
-                                        <div class="control-btn next"><span class="blind">NEXT</span></div>
-                                    </div>
-                                </div>
                             </div>
+                            <span class="thumb" aria-hidden="true"><img src="/images/img/img-sub0401-2.jpg" alt=""></span>
                         </div>
                     </div>
+                </section>
+                <section>
+                    <ul class="img-lists">
+                        <li><img src="/images/img/img-sub0401-3.jpg" alt=""></li>
+                        <li><img src="/images/img/img-sub0401-4.jpg" alt=""></li>
+                        <li><img src="/images/img/img-sub0401-5.jpg" alt=""></li>
+                    </ul>
+                </section>
+                <section>
+                    <div class="introduce">
+                        <div class="box type2">
+                            <div class="text">
+                                <p>
+                                    많은 커피숍 가운데에 하나가 되었지만 초심을 잃지 않고 직접 로스팅한 커피를 신선하고 맛있게 선사하기 위해 끊임없이 노력하고 있습니다.<br><br>
+                                    이곳에서 추억의 한페이지를 예쁘게 만들고 오감이 즐거운 장소로 기억되기를 바랍니다.<br><br>
+                                    <span class="ft-mj">Cafe de jacob's station</span>
+                                </p>
+                            </div>
+                            <span class="thumb" aria-hidden="true"><img src="/images/img/img-sub0401-6.jpg" alt=""></span>
+                        </div>
+                    </div>
+                </section>
+                <section>
+                    <ul class="img-lists">
+                        <li><img src="/images/img/img-sub0401-7.jpg" alt=""></li>
+                        <li><img src="/images/img/img-sub0401-8.jpg" alt=""></li>
+                        <li><img src="/images/img/img-sub0401-9.jpg" alt=""></li>
+                    </ul>
                 </section>
             </div>
             <!-- // page contents -->
@@ -71,16 +84,4 @@
         <!-- // footer -->
     </div>
 </body>
-<script>
-    const imgSlider = new Swiper('.visual-wrap .swiper-container', {
-        autoplay : {
-            delay : 5000
-        },
-        loop : true,
-        navigation : {
-            nextEl : '.visual-wrap .control-btn.next',
-            prevEl : '.visual-wrap .control-btn.prev',
-        }
-    });
-</script>
 </html>

@@ -17,14 +17,87 @@
         <!-- container -->
         <div id="container" class="container cate01">
             @@include('./layout/page-title.html', {
-                cate01 : true,
+                cate01 : 'type3',
                 sub0105 : true,
                 title : '선물세트'
             })
 
             <!-- page contents -->
             <div class="contents">
-                
+                <section>
+                    <div class="about-coffee">
+                        <div class="title">
+                            <div class="text">
+                                <h4>아비시니카의 특별한 원두커피 선물세트<small>COFFEE Gift Set</small></h4>
+                                <p>아비시니카의 프리미엄 제품을 실속있는 구성으로<br>준비한 특별한 선물세트, 카페에서의 감성을 선물하고자<br>구성한 아비시니카만의 마음입니다</p>
+                            </div>
+                            <div class="img">
+                                <img src="/images/img/img-sub0104-1.jpg" alt="스페셜블렌드 원두">
+                            </div>
+                        </div> 
+                        <div class="about-contents">
+                            <section>
+                                <div class="list-title">
+                                    <span class="eyebrow" aria-hidden="true">COFFEE GIFT SET</span>
+                                    <h5>원두커피 선물세트</h5>
+                                    <p class="desc">COFFEE MUST BE GOOD</p>
+                                </div>
+                                <ul class="giftset-list">
+                                    @@loop('./modules/gift-list.html', [
+                                        {
+                                            num : '2',
+                                            name : '에티오피안 예가체프 티백세트',
+                                            cont : '예가체프는 에티오피아 커피 중 가장 세련된 커피. 부드러우면서 짙은 꽃향기 목넘김 이후에 남는 아련한 향, 부드러운 바디,달콤한 신맛 등 와인에 비유되는 향미와 깊은 맛의 커피입니다.',
+                                            size : '360g [90g(4.5g x 20개) x 4 box] 에티오피아'
+                                        },
+                                        {
+                                            num : '3',
+                                            name : '모카플라워 드립백 세트',
+                                            cont : '예가체프 과일향의 부드러움과 하라 초콜릿향의 달콤함이 어우러진 에티오피아 커피 본향의 정수를 담은 커피',
+                                            size : '360g [90g(4.5g x 20개) x 4 box] 에티오피아'
+                                        },
+                                        {
+                                            num : '4',
+                                            name : '원두커피 선물세트',
+                                            cont : '아비시니카에서 엄선한 고품질 100% 아라비카 원두를 100% 에티오피아의 낭만을 맛보며 세계 여러나라의 맛과 향에 빠져볼 수 있는  절호의 기회입니다.',
+                                            size : '아바야 게이샤 200g + 카페 히어로 200g'
+                                        },
+                                        {
+                                            num : '5',
+                                            name : '클래식 원두 드립세트',
+                                            list : [
+                                                '원두 분쇄용 핸드밀 1개', '에티오피아 예가체프 200G', '카페 히어로 200G'
+                                            ]
+                                        },
+                                        {
+                                            num : '6',
+                                            name : '프리미엄 원두 드립세트',
+                                            list : [
+                                                '원두 분쇄용 핸드밀 1개 + 드립포트 1개', '에티오피아 예가체프 200G', '카페 히어로 200G'
+                                            ]
+                                        },
+                                        {
+                                            num : '7',
+                                            name : '오마이카페 프리미엄 선물박스',
+                                            list : [
+                                                '모카플라워 드립백 8T + 예가체프 티백 20T', '모카골드 커피믹스 15T', '에티오피아 예가체프 200G', '콜롬비아 수프리모 200G', '케냐 AA 200G'
+                                            ]
+                                        },
+                                        {
+                                            num : '8',
+                                            name : '오마이카페 스페셜 선물박스',
+                                            list : [
+                                                '모카플라워 드립백 8T + 예가체프 티백 20T', '모카골드 커피믹스 15T + 에티오피아 예가체프 200G',
+                                                '콜롬비아 수프리모 200G + 케냐 AA 200G', '코스타리카 따라주 200G + 볼리비아 카라나비 200G', 
+                                                '자메이카 블루마운틴 100G'
+                                            ]
+                                        },
+                                    ])
+                                </ul>
+                            </section>
+                        </div>
+                    </div>
+                </section>
             </div>
             <!-- // page contents -->
         </div>

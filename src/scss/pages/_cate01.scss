@@ -2,22 +2,23 @@
 .about-coffee {
     .title {
         display:flex;
-        align-items:center;
         padding:55px 60px;
         background:#ebebeb;
         @include tablet {
+            display:block;
             padding:30px 20px;
         }
         @include mobile {
-            display:block;
             padding:20px 12px;
         }
         .text {
             flex:1;
             h4 {
-                font-size:50px;
+                font-size:45px;
+                line-height:1.1;
                 font-weight:700;
                 color:#aeb675;
+                word-break:keep-all;
                 @include tablet {
                     font-size:40px;
                 }
@@ -28,9 +29,10 @@
                     display:block;
                     margin-top:15px;
                     color:#c4c4c4;
-                    font-size:30px;
+                    font-size:28px;
+                    letter-spacing:-0.5px;
                     @include tablet {
-                        font-size:28px;
+                        font-size:26px;
                     }
                     @include mobile {
                         margin-top:5px;
@@ -40,17 +42,19 @@
             }
             p {
                 margin-top:20px;
-                color:#fff;
+                color:#666;
                 @include font-title;
                 word-break:keep-all;
             }
         }
         .img {
-            @include calcs(width, 500px, 1280px);
-            @include calcs(min-width, 500px, 1280px);
-            @include mobile {
-                width:100%;
-                margin-top:15px;
+            max-width:45%;
+            align-self:center;
+            text-align:center;
+            @include tablet {
+                max-width:none;
+                margin-top:20px;
+                text-align:left;
             }
         }
     }
@@ -93,7 +97,7 @@
             .eyebrow {
                 display:block;
                 width:100%;
-                color:rgba($cont, .4);
+                color:#777;
                 font-size:30px;
                 line-height:1;
                 font-weight:100;
@@ -114,7 +118,7 @@
             }
             .desc {
                 align-self:flex-end;
-                color:rgba($cont, .4);
+                color:#777;
                 @include font-title;
                 font-weight:100;
                 word-break:keep-all;
@@ -311,6 +315,146 @@
                                 width:30%;
                                 text-align:right;
                             }
+                        }
+                    }
+                }
+            }
+        }
+        .giftset-list {
+            > li {
+                margin-top:40px;
+                @include mobile {
+                    margin-top:20px;
+                }
+                &:first-child {
+                    margin-top:0;
+                }
+            }
+            .inner {
+                display:flex;
+                align-items:center;
+                padding:0 65px;
+                border:1px solid #a2a2a2;
+                @include mobile {
+                    display:block;
+                    padding:0 16px;
+                }
+                .img {
+                    width:45%;
+                    max-width:510px;
+                    margin-right:10px;
+                    @include mobile {
+                        width:100%;
+                        max-width:none;
+                        text-align:center;
+                    }
+                }
+                .info {
+                    flex:1;
+                    max-width:500px;
+                    margin-left:auto;
+                    padding:20px 0;
+                    @include mobile {
+                        max-width:none;
+                    }
+                    > * {
+                        position:relative;
+                        padding-left:40px;
+                        word-break:keep-all;
+                        @include mobile {
+                            padding-left:30px;
+                        }
+                        &::before {
+                            content:' ';
+                            position:absolute;
+                            top:2px;
+                            left:0;
+                            width:22px;
+                            height:22px;
+                            background:url('/images/icon/icon-title2.gif') center no-repeat;
+                        }
+                    }
+                    .name {
+                        margin-bottom:20px;
+                        font-size:24px;
+                        line-height:1.1;
+                        @include mobile {
+                            font-size:20px;
+                        }
+                    }
+                    .cont {
+                        min-height:28px *4;
+                        color:#666;
+                        @include font-xl;
+                    }
+                    .products {
+                        > li {
+                            margin-top:8px;
+                            color:#666;
+                            @include font-xl;
+                            &:first-child {
+                                margin-top:0;
+                            }
+                        }
+                    }
+                    .size {
+                        margin-top:10px;;
+                        color:#4e5a30;
+                        @include font-xl;
+                    }
+                }
+                &.type2 {
+                    padding:50px 65px;
+                    @include tablet {
+                        flex-wrap:wrap;
+                        padding:20px 65px;
+                    }
+                    @include mobile {
+                        display:flex;
+                        padding:20px 16px;
+                    }
+                    .img {
+                        @include calcs(width, 260px, 1280px);
+                        @include tablet {
+                            width:50%;
+                            margin:0;
+                            text-align:center;
+                        }
+                    }
+                    .info {
+                        flex:1;
+                        align-self:flex-start;
+                        max-width:none;
+                        margin:0;
+                        padding:0 20px;
+                        @include tablet {
+                            order:2;
+                            flex:unset;
+                            width:100%;
+                            margin-top:30px;
+                            padding:0;
+                        }
+                        .cont {
+                            min-height:auto;
+                        }
+                        .size {
+                            margin-top:20px;
+                            color:#666;
+                            text-transform:uppercase;
+                            @include mobile {
+                                margin-top:10px;
+                            }
+                            em {
+                                color:#ffa700;
+                            }
+                        }
+                    }
+                    .img2 {
+                        @include calcs(width, 340px, 1280px);
+                        text-align:right;
+                        @include tablet {
+                            width:50%;
+                            text-align:center;
                         }
                     }
                 }

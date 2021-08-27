@@ -150,15 +150,28 @@
     }
     .img-lists {
         display:flex;
+        flex-wrap:wrap;
         li {
-            flex:1;
-            @include calcs(margin-left, 20px, 1280px);
-            &:first-child {
+            width:calc((100% - 80px) / 5);
+            margin-left:20px;
+            @include tablet {
+                width:calc((100% - 40px) / 5);
+                margin-left:10px;
+            }
+            &:nth-child(5n + 1) {
                 margin-left:0;
+            }
+            &:nth-child(5) ~ li {
+                margin-top:20px;
+                @include tablet {
+                    margin-top:10px;
+                }
+                @include mobile {
+                    margin-top:2%;
+                }
             }
         }
         @include mobile {
-            flex-wrap:wrap;
             li {
                 flex:unset;
                 width:49%;
@@ -882,11 +895,13 @@
             }
         }
         .img-bg-cont {
-            padding:20px 0;
+            padding:20px;
             background:url('/images/bg/bg-sub0608-1.jpg') center no-repeat;
             background-size:cover;
             .txt-box {
                 display:flex;
+                padding:20px;
+                background:#fff;
                 @include mobile {
                     display:block;
                 }
@@ -900,6 +915,11 @@
                         padding-bottom:20px;
                         border-bottom:1px solid #ccc;
                         border-left:none;
+                        &:last-child {
+                            margin-bottom:0;
+                            padding-bottom:0;
+                            border-bottom:none;
+                        }
                     }
                     &:first-child {
                         border-left:none;
@@ -927,14 +947,12 @@
                 }
             }
             .bottom-txt {
-                margin-top:40px;
+                margin-top:20px;
                 color:#666;
                 @include font-md;
                 text-align:center;
                 word-break:keep-all;
-                @include mobile {
-                    margin-top:20px;
-                }
+                font-weight:700;
             }
         }
         .program-cont {
@@ -984,6 +1002,12 @@
                 @include mobile {
                     padding:0;
                 }
+            }
+        }
+        .img-box {
+            margin-top:50px;
+            @include mobile {
+                margin-top:20px;
             }
         }
     }

@@ -38,8 +38,8 @@
         }
         @@if(context.cate04){
         <ul class="tabs">
-            <li@@if(context.sub0401){ class="active"}><a href="/page/sub_04_01.html">제이콥스만 소개</a></li>
-            <li@@if(context.sub0402){ class="active"}><a href="/page/sub_04_02.html">제이콥스만의 특장점</a></li>
+            <li@@if(context.sub0401){ class="active"}><a href="/page/sub_04_01.html">제이콥스스테이션 소개</a></li>
+            <li@@if(context.sub0402){ class="active"}><a href="/page/sub_04_02.html">제이콥스스테이션 갤러리</a></li>
         </ul>
         }
         @@if(context.cate05){
@@ -95,7 +95,15 @@
 }
 @@if(context.cate01){
     <!-- page title -->
-    <h3 class="sub-page-title">아비시니카 프리미엄 브랜드 및 싱글 브랜드 소개</h3>
+    @@if(context.cate01 === 'type2'){
+        <h3 class="sub-page-title">원두커피</h3>
+    }
+    @@if(context.cate01 === 'type3'){
+        <h3 class="sub-page-title">선물 세트</h3>
+    }
+    @@if(context.cate01 !== 'type2' && context.cate01 !== 'type3'){
+        <h3 class="sub-page-title">아비시니카 프리미엄 브랜드 및 싱글 브랜드 소개</h3>
+    }
     <p class="sub-page-desc">에티오피아를 후원하는 한잔의 커피는 아프리카와 동행하는 착한소비입니다.</p>
     <p class="sub-page-desc">좋은 생각 &middot; 좋은 커피</p>
     <!-- // page title -->

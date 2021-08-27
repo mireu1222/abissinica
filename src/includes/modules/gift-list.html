@@ -1,0 +1,23 @@
+<li>
+    <div class="inner">
+        <span class="img" aria-hidden="true">
+            <img src="/images/img/img-sub0104-@@num.jpg" alt="">
+        </span>
+        <div class="info">
+            <p class="name">@@name</p>
+            @@if(context.cont){
+                <p class="cont">@@cont</p>
+            }
+            @@if(context.list){
+                <ul class="products">
+                    @@for(var i=0; i < list.length; i++){
+                        <li>`+list[i]+`</li>
+                    }
+                </ul>
+            }
+            @@if(context.size){
+                <p class="size">@@size</p>
+            }
+        </div>
+    </div>
+</li>

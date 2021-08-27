@@ -180,9 +180,10 @@
         @include contArea;
         text-align:center;
         margin-top:15px;
-        color:#e6c897;
+        color:#e4b389;
         font-size:20px;
         line-height:1.2;
+        font-weight:700;
         word-break:keep-all;
         @include skew;
         @include mobile {
@@ -323,6 +324,9 @@
                             font-weight:100;
                             letter-spacing:-1px;
                         }
+                        &.type2::before {
+                            content:"JACOB'S STATION";
+                        }
                         @include mobile {
                             font-size:28px;
                             &::before {
@@ -342,9 +346,35 @@
                             display:block;
                             margin-bottom:24px;
                             font-weight:700;
+                            @include mobile {
+                                margin-bottom:22px;
+                            }
                             span.ft-noto {
                                 font-weight:500;
                             }
+                        }
+                        span.bd {
+                            display:block;
+                            margin:16px auto;
+                            padding:16px 20px;
+                            border:1px solid $border;
+                            em {
+                                margin-top:24px;
+                                &:last-child {
+                                    margin-bottom:0;
+                                }
+                            }
+                            @include mobile {
+                                margin:12px auto;
+                                padding:12px;
+                                em {
+                                    margin-top:22px;
+                                }
+                            }
+                        }
+                        span.ft-mj {
+                            display:block;
+                            font-size:24px;
                         }
                         &::after {
                             content:' ';

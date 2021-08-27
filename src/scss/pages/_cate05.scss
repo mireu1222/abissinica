@@ -1,177 +1,125 @@
 /* 사업자 구매 */
 .container.cate05 {
-    .sub05 {
-        .head {
-            display:flex;
-            background:#e4b389;
-            @include tablet {
-                align-items:flex-start;
+    .sub0501 {
+        padding:60px 100px;
+        border:1px solid #714938;
+        @include tablet {
+            padding:40px 50px;
+        }
+        @include mobile {
+            padding:20px 12px;
+        }
+        .tit-top {
+            position:relative;
+            margin-bottom:40px;
+            padding-bottom:35px;
+            word-break:keep-all;
+            &::after {
+                content:' ';
+                position:absolute;
+                bottom:0;
+                left:50%;
+                width:264px;
+                height:1px;
+                margin-left:-132px;
+                background:#666;
             }
-            @include mobile {
-                display:block;
-            }
-            .thumb {
-                display:block;
-                @include calcs(width, 525px, 1280px);
-                @include calcs(min-width, 525px, 1280px);
-                box-shadow: 3px 4px 5px 0px rgba(0, 0, 0, 0.47);
+            .tit {
+                font-size:32px;
+                line-height:1.2;
+                font-weight:900;
                 @include mobile {
-                    width:100%;
-                    min-width:100%;
+                    font-size:24px;
                 }
             }
-            .text {
-                flex:1;
-                @include calcs(padding-left, 70px, 1280px);
-                @include calcs(padding-top, 60px, 1280px);
-                @include calcs(padding-bottom, 60px, 1280px);
-                @include calcs(padding-right, 100px, 1280px);
-                color:#fff;
-                @include tablet {
-                    padding:20px 30px;
-                }
+            .desc {
+                margin-top:20px;
+                font-size:20px;
+                line-height:2;
+                font-weight:700;
                 @include mobile {
-                    padding:20px 12px;
-                }
-                .tit {
-                    font-size:32px;
-                    line-height:40px;
-                    font-weight:900;
-                    word-break:keep-all;
-                    @include tablet {
-                        font-size:28px;
-                        line-height:36px;
-                    }
-                    @include mobile {
-                        font-size:24px;
-                        line-height:32px;
-                    }
-                }
-                .desc {
-                    margin-top:25px;
-                    font-size:20px;
-                    line-height:40px;
-                    font-weight:700;
-                    word-break:keep-all;
-                    @include tablet {
-                        margin-top:20px;
-                        font-size:18px;
-                        line-height:28px;
-                    }
-                    @include mobile {
-                        font-size:16px;
-                        line-height:24px;
-                        @include skew;
-                    }
+                    font-size:18px;
                 }
             }
         }
         .body {
-            padding:70px 40px 60px;
-            border:3px solid $border;
-            border-top:none;
+            .bullet-list li {
+                @include font-xl;
+            }
+            p {
+                margin-top:30px;
+                @include font-xl;
+            }
+        }
+        .bg {
+            margin:50px -100px -60px;
+            padding:70px 20px;
+            background:url('/images/img/img-sub0501-1.jpg') center no-repeat;
+            background-size:cover;
+            color:#fff;
+            font-size:24px;
+            line-height:1.4;
+            font-weight:700;
+            text-align:center;
+            word-break:keep-all;
             @include tablet {
-                padding:50px 20px;
+                margin:50px -50px -40px;
             }
             @include mobile {
-                padding:30px 12px;
+                margin:30px -12px -20px;
+                padding:40px 12px;
+                font-size:18px;
             }
-            .bullet-list {
-                max-width:950px;
-                margin:0 auto;
-                text-align:left;
-                li {
+        }
+    }
+    .sub0502 {
+        display:flex;
+        padding:100px 60px;
+        border:1px solid $border;
+        @include tablet {
+            padding:50px 30px;
+        }
+        @include mobile {
+            display:block;
+            padding:30px 12px;
+        }
+        .img {
+            flex:1;
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            margin-right:40px;
+            @include mobile {
+                margin-right:0;
+                margin-bottom:20px;
+                img {
+                    max-width:50%;
+                }
+            }
+        }
+        .text {
+            flex:1;
+            margin-left:auto;
+            .box {
+                margin-top:60px;
+                @include mobile {
+                    margin-top:30px;
+                }
+                &:first-child {
+                    margin-top:0;
+                }
+                .tit {
+                    margin-bottom:20px;
+                    padding-left:40px;
+                    background:url('/images/icon/icon-title2.gif') 0 2px no-repeat;
                     color:#666;
-                    font-size:20px;
-                    line-height:27px;
-                    letter-spacing:-0.5px;
+                    @include font-xl;
+                    font-weight:700;
                     word-break:keep-all;
-                    @include mobile {
-                        font-size:18px;
-                        line-height:25px;
-                    }
-                    @include mobile {
-                        font-size:16px;
-                        line-height:24px;
-                    }
                 }
-            }
-            > p {
-                position:relative;
-                margin-top:70px;
-                padding-top:45px;
-                color:#666;
-                @include font-md;
-                word-break:keep-all;
-                text-align:center;
-                @include mobile {
-                    margin-top:40px;
-                    padding-top:25px;
-                }
-                &::before {
-                    content:' ';
-                    position:absolute;
-                    top:0;
-                    left:50%;
-                    width:265px;
-                    height:1px;
-                    margin-left:-132px;
-                    background:#666;
-                    @include mobile {
-                        width:160px;
-                        margin-left:-80px;
-                    }
-                }
-            }
-            &.type2 {
-                padding:70px 0 60px;
-                @include tablet {
-                    padding:50px 0;
-                }
-                @include mobile {
-                    padding:30px 0;
-                }
-                .flex {
-                    display:flex;
-                    @include mobile {
-                        display:block;
-                    }
-                    .box {
-                        padding:0 50px;
-                        border-left:1px solid $border;
-                        @include tablet {
-                            padding:0 30px;
-                        }
-                        @include mobile {
-                            margin-top:20px;
-                            padding:0 12px;
-                        }
-                        &:first-child {
-                            margin-top:0;
-                            border-left:none;
-                        }
-                        .tit {
-                            margin-bottom:20px;
-                            padding-left:40px;
-                            background:url('/images/icon/icon-title2.gif') 0 0 no-repeat;
-                            color:#666;
-                            font-size:20px;
-                            line-height:22px;
-                            font-weight:700;
-                            word-break:keep-all;
-                            @include mobile {
-                                margin-bottom:10px;
-                                padding-left:30px;
-                                font-size:18px;
-                            }
-                        }
-                        .bullet-list {
-                            padding-left:40px;
-                            @include mobile {
-                                padding-left:30px;
-                            }
-                        }
-                    }
+                .bullet-list li {
+                    color:#666;
+                    @include font-xl;
                 }
             }
         }
